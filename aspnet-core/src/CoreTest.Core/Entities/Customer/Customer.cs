@@ -5,13 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
-using FocusMedia.FSOi.Entities.Base;
 
-namespace FocusMedia.FSOi.Entities.Customer
+namespace CoreTest.Entities.Customer
 {
     [Table("CRM_Customer")]
-    public class Customer: FullAuditedEntity
+    public class Customer: FullAuditedEntity<int>, IMayHaveTenant, IPassivable
     {
         [Key]
         [Column("CustomerId", Order = 1)]
@@ -45,12 +45,8 @@ namespace FocusMedia.FSOi.Entities.Customer
         /// </summary>
         public virtual int? SyncId { get; set; }
 
-        /// <summary>
-        /// 判断是否启用
-        /// </summary>
-        public virtual bool IsActive { get; set; }
+        public virtual int? TenantId { get; set; }
 
-        //[ForeignKey("CountryCode")]
-        //public virtual Country Country { get; set; }
+        public virtual bool IsActive { get; set; }
     }
 }

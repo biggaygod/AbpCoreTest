@@ -5,12 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 
-namespace FocusMedia.FSOi.Entities.Base
+namespace CoreTest.Entities.Base
 {
     [Table("Dic_Dictionary")]
-    public class Dictionary: FullAuditedEntity
+    public class Dictionary: FullAuditedEntity<int>, IMayHaveTenant
     {
         [Key]
         [Column("DicId")]
@@ -22,5 +23,7 @@ namespace FocusMedia.FSOi.Entities.Base
 
         [MaxLength(2000, ErrorMessage = "MaxLength 2000")]
         public virtual string Description { get; set; }
+
+        public virtual int? TenantId { get; set; }
     }
 }

@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 
-namespace FocusMedia.FSOi.Entities.Base
+namespace CoreTest.Entities.Base
 {
     [Table("Base_City")]
-    public class BaseCity : FullAuditedEntity//,ISoftDelete, ICreationAudited,IModificationAudited
+    public class BaseCity : FullAuditedEntity<int>, IMayHaveTenant, IPassivable
     {
         [Key]
         [Column("CityId",Order = 1)]
@@ -50,12 +50,8 @@ namespace FocusMedia.FSOi.Entities.Base
 
         public virtual bool IsPublish { get; set; }
 
-        /// <summary>
-        /// 是否活跃
-        /// </summary>
-        public virtual bool IsActive { get; set; }
+        public virtual int? TenantId { get; set; }
 
-        //[ForeignKey("CountryCode")]
-        //public virtual Country Country { get; set; }
+        public virtual bool IsActive { get; set; }
     }
 }

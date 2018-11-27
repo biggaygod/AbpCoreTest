@@ -5,12 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 
-namespace FocusMedia.FSOi.Entities.Base
+namespace CoreTest.Entities.Base
 {
     [Table("ED_Department")]
-    public class Department : FullAuditedEntity
+    public class Department : FullAuditedEntity<int>, IMayHaveTenant, IPassivable
     {
         [Key]
         [Column("DeptId" ,Order = 1)]
@@ -30,7 +31,8 @@ namespace FocusMedia.FSOi.Entities.Base
 
         public virtual int? ParentDeptId { get; set; }
 
-        //[ForeignKey("CountryCode")]
-        //public virtual Country Country { get; set; }
+        public virtual int? TenantId { get; set; }
+
+        public virtual bool IsActive { get; set; }
     }
 }

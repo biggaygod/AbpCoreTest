@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Entities.Auditing;
+﻿using Abp.Domain.Entities;
+using Abp.Domain.Entities.Auditing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,10 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FocusMedia.FSOi.Entities.Customer
+namespace CoreTest.Entities.Customer
 {
     [Table("CRM_File")]
-    public class CustomerFile: FullAuditedEntity
+    public class CustomerFile: FullAuditedEntity<int>, IMayHaveTenant
     {
         [Key]
         [Column("CustomerBrandId", Order = 1)]
@@ -34,5 +35,8 @@ namespace FocusMedia.FSOi.Entities.Customer
         /// </summary>
         [MaxLength(1000, ErrorMessage = "MaxLength 1000")]
         public virtual string FileName { get; set; }
+
+
+        public virtual int? TenantId { get; set; }
     }
 }

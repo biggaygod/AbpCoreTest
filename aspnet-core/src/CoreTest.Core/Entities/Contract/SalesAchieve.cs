@@ -6,9 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Abp.Domain.Entities.Auditing;
-using FocusMedia.FSOi.Entities.Base;
 
-namespace FocusMedia.FSOi.Entities.Contract
+namespace CoreTest.Entities.Contrac
 {
     [Table("SCM_SalesAchieve")]
     public class SalesAchieve : FullAuditedEntity

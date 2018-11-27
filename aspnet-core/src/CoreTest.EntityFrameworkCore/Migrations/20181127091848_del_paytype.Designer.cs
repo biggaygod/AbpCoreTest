@@ -4,14 +4,16 @@ using CoreTest.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoreTest.Migrations
 {
     [DbContext(typeof(CoreTestDbContext))]
-    partial class CoreTestDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181127091848_del_paytype")]
+    partial class del_paytype
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1273,50 +1275,6 @@ namespace CoreTest.Migrations
                     b.HasAlternateKey("CountryCode", "Id");
 
                     b.ToTable("ED_Employee");
-                });
-
-            modelBuilder.Entity("CoreTest.Entities.Base.PayType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CountryCode")
-                        .HasMaxLength(20);
-
-                    b.Property<int>("CN_Code");
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<string>("EngName")
-                        .HasMaxLength(120);
-
-                    b.Property<bool>("IsActive");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.Property<int>("PayCode");
-
-                    b.Property<string>("PayName")
-                        .HasMaxLength(120);
-
-                    b.Property<int?>("TenantId");
-
-                    b.HasKey("Id", "CountryCode");
-
-                    b.HasAlternateKey("Id");
-
-                    b.ToTable("Base_PayType");
                 });
 
             modelBuilder.Entity("CoreTest.Entities.Base.SignBody", b =>

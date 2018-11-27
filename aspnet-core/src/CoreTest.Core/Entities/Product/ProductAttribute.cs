@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Abp.Domain.Entities.Auditing;
 
-namespace FocusMedia.FSOi.Entities.Product
+namespace CoreTest.Entities.Product
 {
     [Table("PR_ProductAttribute")]
     public class ProductAttribute : FullAuditedEntity

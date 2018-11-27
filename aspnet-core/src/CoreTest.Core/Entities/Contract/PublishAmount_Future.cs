@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Abp.Domain.Entities.Auditing;
 
-namespace FocusMedia.FSOi.Entities.Contract
+namespace CoreTest.Entities.Contract
 {
     [Table("SCM_PublishAmount_Future")]
     public class PublishAmount_Future: FullAuditedEntity

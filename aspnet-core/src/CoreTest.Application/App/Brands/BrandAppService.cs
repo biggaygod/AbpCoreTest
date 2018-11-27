@@ -8,7 +8,7 @@ using Abp.Runtime.Caching;
 using AutoMapper.QueryableExtensions;
 using CoreTest.Authorization;
 using CoreTest.Brands.Dto;
-using CoreTest.Entities;
+using CoreTest.Entities.Customer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;

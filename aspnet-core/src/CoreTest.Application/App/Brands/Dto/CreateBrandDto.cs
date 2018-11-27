@@ -1,5 +1,5 @@
 ﻿using Abp.AutoMapper;
-using CoreTest.Entities;
+using CoreTest.Entities.Customer;
 using System;
 using System.Collections.Generic;
 using System.Text;

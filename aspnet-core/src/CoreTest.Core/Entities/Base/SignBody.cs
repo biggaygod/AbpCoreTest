@@ -5,12 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 
-namespace FocusMedia.FSOi.Entities.Base
+namespace CoreTest.Entities.Base
 {
     [Table("Base_SignBody")]
-    public class SignBody: FullAuditedEntity
+    public class SignBody: FullAuditedEntity<int>, IMayHaveTenant, IPassivable
     {
         [Key]
         [Column("BodyId", Order = 1)]
@@ -31,12 +32,8 @@ namespace FocusMedia.FSOi.Entities.Base
         [MaxLength(120, ErrorMessage = "MaxLength 120")]
         public virtual string EngName { get; set; }
 
-        //[ForeignKey("CountryCode")]
-        //public virtual Country Country { get; set; }
-
-        /// <summary>
-        /// 是否活跃
-        /// </summary>
         public bool IsActive { get; set; }
+
+        public virtual int? TenantId { get; set; }
     }
 }

@@ -4,14 +4,16 @@ using CoreTest.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoreTest.Migrations
 {
     [DbContext(typeof(CoreTestDbContext))]
-    partial class CoreTestDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181127092006_add_newPaytype")]
+    partial class add_newPaytype
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

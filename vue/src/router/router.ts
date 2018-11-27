@@ -34,7 +34,7 @@ export const appRouters=[{
     path:'/setting',
     name:'setting',
     permission:'',
-    meta:{title:'ManageMenu'},
+    meta:{title:'主菜单'},
     icon:'&#xe68a;',
     component:main,
     children:[

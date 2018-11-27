@@ -6,13 +6,13 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace CoreTest.Entities
+namespace CoreTest.Entities.Customer
 {
     [Table("CRM_Brand")]
     public class Brand : FullAuditedEntity<int>,IMayHaveTenant,IPassivable
     {
         [Key]
-        [Column(Order = 1)]
+        [Column("BrandId", Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public override int Id { get ; set; }
 
@@ -32,9 +32,6 @@ namespace CoreTest.Entities
 
         public virtual int? TenantId { get; set; }
 
-        /// <summary>
-        /// 启用停用状态
-        /// </summary>
         public virtual bool IsActive { get; set; }
 
     }
