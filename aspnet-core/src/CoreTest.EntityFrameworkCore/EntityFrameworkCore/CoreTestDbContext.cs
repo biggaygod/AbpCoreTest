@@ -17,13 +17,12 @@ namespace CoreTest.EntityFrameworkCore
         {
         }
 
-        
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-        //    modelBuilder.Entity<Brand>().HasIndex(p => p.Id).IsUnique();
-        //}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
 }

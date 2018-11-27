@@ -13,8 +13,6 @@ namespace CoreTest.Brands.Dto
 
         public string CountryCode { get; set; }
 
-        public string CountryName { get; set; }
-
         public string BrandName { get; set; }
 
         public string EngName { get; set; }
@@ -22,15 +20,5 @@ namespace CoreTest.Brands.Dto
         public string Spell { get; set; }
 
         public bool IsActive { get; set; }
-
-        public DateTime CreationTime { get; set; }
-
-        public long? CreatorUserId { get; set; }
-
-        public DateTime? LastModificationTime { get; set; }
-
-        public long? LastModifierUserId { get; set; }
-
-        public bool IsDeleted { get; set; }
     }
 }

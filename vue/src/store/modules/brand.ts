@@ -8,8 +8,7 @@ import PageResult from '@/store/entities/page-result';
 import ListMutations from './list-mutations'
 
 interface BrandState extends ListState<Brand>{
-    editBrand:Brand,
-    roles:Role[]
+    editBrand:Brand
 }
 class BrandMutations extends ListMutations<Brand>{
 
@@ -21,34 +20,29 @@ class BrandModule extends ListModule<BrandState,any,Brand>{
         pageSize:10,
         list: new Array<Brand>(),
         loading:false,
-        editUser:new Brand(),
-        roles:new Array<Role>()
+        editBrand:new Brand(),
     }
     actions={
         async getAll(context:ActionContext<BrandState,any>,payload:any){
             context.state.loading=true;
-            let reponse=await Ajax.get('/api/services/app/Brand/GetAllBrand',{params:payload.data});
+            let reponse=await Ajax.get('/api/services/app/Brand/GetAll',{params:payload.data});
             context.state.loading=false;
             let page=reponse.data.result as PageResult<Brand>;
             context.state.totalCount=page.totalCount;
             context.state.list=page.items;
         },
         async create(context:ActionContext<BrandState,any>,payload:any){
-            await Ajax.post('/api/services/app/Brand/CreateBrand',payload.data);
+            await Ajax.post('/api/services/app/Brand/Create',payload.data);
         },
         async update(context:ActionContext<BrandState,any>,payload:any){
-            await Ajax.put('/api/services/app/Brand/UpdateBrand',payload.data);
+            await Ajax.put('/api/services/app/Brand/Update',payload.data);
         },
         async delete(context:ActionContext<BrandState,any>,payload:any){
-            await Ajax.delete('/api/services/app/Brand/DeleteBrand?Id='+payload.data.id);
+            await Ajax.delete('/api/services/app/Brand/Delete?Id='+payload.data.id);
         },
         async get(context:ActionContext<BrandState,any>,payload:any){
-            let reponse=await Ajax.get('/api/services/app/Brand/GetBrand?Id='+payload.id);
+            let reponse=await Ajax.get('/api/services/app/Brand/Get?Id='+payload.id);
             return reponse.data.result as Brand;
-        },
-        async getRoles(context:ActionContext<BrandState,any>){
-            let reponse=await Ajax.get('/api/services/app/User/GetRoles');
-            context.state.roles=reponse.data.result.items as Role[];
         },
         async changeLanguage(context:ActionContext<BrandState,any>,payload:any){
             await Ajax.post('/api/services/app/User/ChangeLanguage',payload.data);

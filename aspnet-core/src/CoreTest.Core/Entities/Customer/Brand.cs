@@ -12,6 +12,11 @@ namespace CoreTest.Entities
     public class Brand : FullAuditedEntity<int>,IMayHaveTenant,IPassivable
     {
         [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public override int Id { get ; set; }
+
+        [Key]
         [Column(Order = 2)]
         [MaxLength(20, ErrorMessage = "MaxLength 20")]
         public virtual string CountryCode { get; set; }

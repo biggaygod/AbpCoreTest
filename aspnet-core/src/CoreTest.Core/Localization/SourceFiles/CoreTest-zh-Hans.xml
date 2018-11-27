@@ -26,5 +26,17 @@
     <text name="Roles" value="角色" />
     <text name="Tenants" value="租户" />
 
+    
+    <text name="CountryCode" value="国家代码" />
+    <text name="BrandName" value="品牌名称" />
+    <text name="EngName" value="英文名称" />
+    <text name="Spell" value="速拼码" />
+    <text name="IsActive" value="是否激活" />
+    <text name="CreationTime" value="创建时间" />
+    <text name="CreatorUserId" value="创建人" />
+    <text name="LastModificationTime" value="修改时间" />
+    <text name="LastModifierUserId" value="修改人" />
+    <text name="IsDeleted" value="是否删除" />
+
   </texts>
 </localizationDictionary>

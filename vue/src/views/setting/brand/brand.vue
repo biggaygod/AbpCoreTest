@@ -5,12 +5,12 @@
                 <Form ref="queryForm" :label-width="80" label-position="left" inline>
                     <Row :gutter="16">
                         <Col span="6">
-                            <FormItem :label="L('UserName')+':'" style="width:100%">
+                            <FormItem :label="L('CountryCode')+':'" style="width:100%">
                                 <Input v-model="filters[0].Value"></Input>
                             </FormItem>
                         </Col>
                         <Col span="6">
-                            <FormItem :label="L('Name')+':'" style="width:100%">
+                            <FormItem :label="L('BrandName')+':'" style="width:100%">
                                 <Input v-model="filters[1].Value"></Input>
                             </FormItem>
                         </Col>
@@ -41,8 +41,8 @@
                 </div>
             </div>
         </Card>
-        <create-user v-model="createModalShow" @save-success="getpage"></create-user>
-        <edit-user v-model="editModalShow" @save-success="getpage"></edit-user>
+        <create-brand v-model="createModalShow" @save-success="getpage"></create-brand>
+        <edit-brand v-model="editModalShow" @save-success="getpage"></edit-brand>
     </div>
 </template>
 <script lang="ts">
@@ -51,28 +51,28 @@
     import AbpBase from '../../../lib/abpbase'
     import {FieldType,Filter,CompareType} from '../../../store/entities/filter'
     import PageRequest from '../../../store/entities/page-request'
-    import CreateUser from './create-user.vue'
-    import EditUser from './edit-user.vue'
+    import CreateBrand from './create-brand.vue'
+    import EditBrand from './edit-brand.vue'
     @Component({
-        components:{CreateUser,EditUser}
+        components:{CreateBrand,EditBrand}
     })
-    export default class Users extends AbpBase{
+    export default class Brands extends AbpBase{
         edit(){
             this.editModalShow=true;
         }
         filters:Filter[]=[
-            {Type:FieldType.String,Value:'',FieldName:'UserName',CompareType:CompareType.Contains},
-            {Type:FieldType.String,Value:'',FieldName:'Name',CompareType:CompareType.Contains},
+            {Type:FieldType.String,Value:'',FieldName:'CountryCode',CompareType:CompareType.Contains},
+            {Type:FieldType.String,Value:'',FieldName:'BrandName',CompareType:CompareType.Contains},
             {Type:FieldType.DataRange,Value:'',FieldName:'CreationTime',CompareType:CompareType.Contains},
             {Type:FieldType.Boolean,Value:null,FieldName:'IsActive',CompareType:CompareType.Equal}
         ]
         createModalShow:boolean=false;
         editModalShow:boolean=false;
         get list(){
-            return this.$store.state.user.list;
+            return this.$store.state.brand.list;
         };
         get loading(){
-            return this.$store.state.user.loading;
+            return this.$store.state.brand.loading;
         }
         create(){
             this.createModalShow=true;
@@ -87,11 +87,11 @@
             }
         }
         pageChange(page:number){
-            this.$store.commit('user/setCurrentPage',page);
+            this.$store.commit('brand/setCurrentPage',page);
             this.getpage();
         }
         pagesizeChange(pagesize:number){
-            this.$store.commit('user/setPageSize',pagesize);
+            this.$store.commit('brand/setPageSize',pagesize);
             this.getpage();
         }
         async getpage(){
@@ -101,25 +101,25 @@
             pagerequest.skipCount=(this.currentPage-1)*this.pageSize;
             pagerequest.where=where;
             await this.$store.dispatch({
-                type:'user/getAll',
+                type:'brand/getAll',
                 data:pagerequest
             })
         }
         get pageSize(){
-            return this.$store.state.user.pageSize;
+            return this.$store.state.brand.pageSize;
         }
         get totalCount(){
-            return this.$store.state.user.totalCount;
+            return this.$store.state.brand.totalCount;
         }
         get currentPage(){
-            return this.$store.state.user.currentPage;
+            return this.$store.state.brand.currentPage;
         }
         columns=[{
-            title:this.L('UserName'),
-            key:'userName'
+            title:this.L('CountryCode'),
+            key:'countryCode'
         },{
-            title:this.L('Name'),
-            key:'name'
+            title:this.L('BrandName'),
+            key:'brandName'
         },{
             title:this.L('IsActive'),
             render:(h:any,params:any)=>{
@@ -127,14 +127,15 @@
             }
         },{
             title:this.L('CreationTime'),
-            key:'creationTime',
+            key:'creatioTime',
             render:(h:any,params:any)=>{
                 return h('span',new Date(params.row.creationTime).toLocaleDateString())
             }
         },{
-            title:this.L('LastLoginTime'),
+            title:this.L('LastModificationTime'),
+            key:'lastModificationTime',
             render:(h:any,params:any)=>{
-                return h('span',new Date(params.row.lastLoginTime).toLocaleString())
+                return h('span',new Date(params.row.lastModificationTime).toLocaleDateString())
             }
         },{
             title:this.L('Actions'),
@@ -152,7 +153,7 @@
                         },
                         on:{
                             click:()=>{
-                                this.$store.commit('user/edit',params.row);
+                                this.$store.commit('brand/edit',params.row);
                                 this.edit();
                             }
                         }
@@ -171,7 +172,7 @@
                                         cancelText:this.L('No'),
                                         onOk:async()=>{
                                             await this.$store.dispatch({
-                                                type:'user/delete',
+                                                type:'brand/delete',
                                                 data:params.row
                                             })
                                             await this.getpage();
@@ -183,11 +184,8 @@
                 ])
             }
         }]
-        async created(){
+         created(){
             this.getpage();
-            await this.$store.dispatch({
-                type:'user/getRoles'
-            })
         }
     }
 </script>

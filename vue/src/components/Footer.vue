@@ -13,7 +13,7 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class Footer extends Vue{
   
 }
-</script>
+</script> 
 <style scoped>
   .copyright{
     padding: 0 16px;

@@ -21,14 +21,14 @@ export default class FullScreen extends AbpBase {
         let main = document.body as any;
         let documentAany=document as any;
         if (this.value) {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
+            if (documentAany.exitFullscreen) {
+                documentAany.exitFullscreen();
             } else if (documentAany.mozCancelFullScreen) {
                 documentAany.mozCancelFullScreen();
-            } else if (document.webkitCancelFullScreen) {
-                 document.webkitCancelFullScreen();
+            } else if (documentAany.webkitCancelFullScreen) {
+                 documentAany.webkitCancelFullScreen();
             } else if (documentAany.msExitFullscreen) {
-                 documentAany.msExitFullscreen();
+                 documentAany.msExitFullscreen(); 
             }
         } else {
             if (main.requestFullscreen) {
@@ -47,7 +47,7 @@ export default class FullScreen extends AbpBase {
     }
     created () {
         let documentAny=document as any;
-        let isFullscreen = document.fullscreenElement || documentAny.mozFullScreenElement || document.webkitFullscreenElement || documentAny.fullScreen || documentAny.mozFullScreen || document.webkitIsFullScreen;
+        let isFullscreen = documentAny.fullscreenElement || documentAny.mozFullScreenElement || documentAny.webkitFullscreenElement || documentAny.fullScreen || documentAny.mozFullScreen || documentAny.webkitIsFullScreen;
         isFullscreen = !!isFullscreen;
         document.addEventListener('fullscreenchange', () => {
             this.$emit('input', !this.value);

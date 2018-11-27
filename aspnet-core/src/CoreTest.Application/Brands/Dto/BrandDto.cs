@@ -1,4 +1,5 @@
-﻿using Abp.AutoMapper;
+﻿using Abp.Application.Services.Dto;
+using Abp.AutoMapper;
 using CoreTest.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,15 +10,16 @@ using System.Text;
 namespace CoreTest.Brands.Dto
 {
     [AutoMapTo(typeof(Brand))]
-    public class BrandDto
+    public class BrandDto: EntityDto<int>
     {
-        public int? Id { get; set; }
-
         [MaxLength(20, ErrorMessage = "MaxLength 20")]
         public string CountryCode { get; set; }
 
+        public string CountryName { get; set; }
+
         [MaxLength(120, ErrorMessage = "MaxLength 120")]
         public string BrandName { get; set; }
+
 
         [MaxLength(120, ErrorMessage = "MaxLength 120")]
         public string EngName { get; set; }
@@ -29,5 +31,15 @@ namespace CoreTest.Brands.Dto
         /// 启用停用状态
         /// </summary>
         public bool IsActive { get; set; }
+
+        public DateTime CreationTime { get; set; }
+
+        public long? CreatorUserId { get; set; }
+
+        public DateTime? LastModificationTime { get; set; }
+
+        public long? LastModifierUserId { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

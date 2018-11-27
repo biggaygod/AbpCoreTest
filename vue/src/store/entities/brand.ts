@@ -5,6 +5,5 @@ export default class Brand extends Entity<number>
     BrandName:string;
     EngName:string;
     Spell:string;
-    TenantId:number;
     IsActive:boolean;
 }

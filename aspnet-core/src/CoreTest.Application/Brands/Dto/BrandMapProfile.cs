@@ -10,8 +10,11 @@ namespace CoreTest.Brands.Dto
     {
         public BrandMapProfile()
         {
-            CreateMap<Brand, BrandDto>();
-            CreateMap<Brand, CreateBrandDto>().ForMember(x => x.CountryName, opt => opt.Ignore());
+            CreateMap<BrandDto, Brand>();
+
+            CreateMap<Brand, BrandDto>().ForMember(x => x.CountryName, opt => opt.Ignore());
+
+            CreateMap<CreateBrandDto, Brand>();
         }
     }
 }
