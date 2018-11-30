@@ -46,7 +46,7 @@ class Util{
                 if(dates.length!==2){
                     throw 'Dates format is error';
                 }else if(dates[0]&&dates[1]){
-                    return `(${filter.FieldName}>= DateTime(${dates[0].getFullYear()},${dates[0].getMonth()+1},${dates[0].getDate()}) AND ${filter.FieldName}<= DateTime(${dates[1].getFullYear()},${dates[1].getMonth()+1},${dates[1].getDate()}))`;
+                    return `(${filter.FieldName}>= '${dates[0].getFullYear()}-${dates[0].getMonth()+1}-${dates[0].getDate()}' AND ${filter.FieldName}<= '${dates[1].getFullYear()}-${dates[1].getMonth()+1}-${dates[1].getDate()}')`;
                 }else{
                     return ''
                 }
@@ -65,9 +65,9 @@ class Util{
         if(filter.Value==null){
             return ''
         }else if(filter.Value){
-            return `${filter.FieldName}=true`
+            return `${filter.FieldName}=1`
         }else if(!filter.Value){
-            return `${filter.FieldName}=false`
+            return `${filter.FieldName}=0`
         }else{
             return ''
         }
@@ -77,7 +77,10 @@ class Util{
             return ''
         }
         let compare=this.caseCompare(filter.CompareType);
-        return `${filter.FieldName}${compare}("${filter.Value}")`
+        if(filter.CompareType===6)
+        return `${filter.FieldName}${compare}'${filter.Value}%'`
+        else
+        return `${filter.FieldName}${compare}'${filter.Value}'`
     }
     private buildNumber(filter:Filter){
         let compare=this.caseCompare(filter.CompareType);
@@ -90,7 +93,7 @@ class Util{
             case CompareType.Equal:return '=';
             case CompareType.GreaterOrEqual:return '>=';
             case CompareType.LessOrEqual:return '<=';
-            case CompareType.Contains:return '.Contains';
+            case CompareType.Contains:return ' like ';
             case CompareType.StartWith:return '.StartWith';
             case CompareType.EndWith:return '.EndWith';
             case CompareType.NotEqual:return '!=';

@@ -1,24 +1,16 @@
-﻿using System;
+﻿using Abp.Application.Services.Dto;
+using Abp.AutoMapper;
+using CoreTest.Entities.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Abp.Domain.Entities;
-using Abp.Domain.Entities.Auditing;
 
-namespace CoreTest.Entities.Base
+namespace CoreTest.App.Countrys.Dto
 {
-    [Table("C_Country")]
-    public class Country: FullAuditedEntity<int>, IMayHaveTenant, IPassivable
+    [AutoMapTo(typeof(Country))]
+    public class CountryDto: EntityDto<int>
     {
-        [Key]
-        [Column("CountryId", Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public override int Id { get; set; }
-
-        [Key]
         [MaxLength(20, ErrorMessage = "MaxLength 20")]
         public virtual string CountryCode { get; set; }
 
@@ -37,5 +29,15 @@ namespace CoreTest.Entities.Base
         public virtual int? TenantId { get; set; }
 
         public virtual bool IsActive { get; set; }
+
+        public DateTime CreationTime { get; set; }
+
+        public long? CreatorUserId { get; set; }
+
+        public DateTime? LastModificationTime { get; set; }
+
+        public long? LastModifierUserId { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

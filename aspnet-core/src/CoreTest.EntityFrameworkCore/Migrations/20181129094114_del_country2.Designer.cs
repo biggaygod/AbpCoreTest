@@ -4,14 +4,16 @@ using CoreTest.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoreTest.Migrations
 {
     [DbContext(typeof(CoreTestDbContext))]
-    partial class CoreTestDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181129094114_del_country2")]
+    partial class del_country2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1068,53 +1070,6 @@ namespace CoreTest.Migrations
                     b.HasAlternateKey("CountryCode", "Id");
 
                     b.ToTable("Base_City");
-                });
-
-            modelBuilder.Entity("CoreTest.Entities.Base.Country", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("CountryId")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CountryCode")
-                        .HasMaxLength(20);
-
-                    b.Property<string>("ChineseName")
-                        .HasMaxLength(120);
-
-                    b.Property<string>("CountryName")
-                        .HasMaxLength(120);
-
-                    b.Property<string>("CountryShort")
-                        .HasMaxLength(120);
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<string>("EnglishName")
-                        .HasMaxLength(120);
-
-                    b.Property<bool>("IsActive");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.Property<int?>("TenantId");
-
-                    b.HasKey("Id", "CountryCode");
-
-                    b.HasAlternateKey("CountryCode", "Id");
-
-                    b.ToTable("C_Country");
                 });
 
             modelBuilder.Entity("CoreTest.Entities.Base.Department", b =>

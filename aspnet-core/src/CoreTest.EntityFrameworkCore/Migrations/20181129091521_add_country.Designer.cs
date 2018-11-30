@@ -4,14 +4,16 @@ using CoreTest.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoreTest.Migrations
 {
     [DbContext(typeof(CoreTestDbContext))]
-    partial class CoreTestDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181129091521_add_country")]
+    partial class add_country
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1072,12 +1074,10 @@ namespace CoreTest.Migrations
 
             modelBuilder.Entity("CoreTest.Entities.Base.Country", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("CountryId")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("Id");
 
                     b.Property<string>("CountryCode")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(20);
 
                     b.Property<string>("ChineseName")
@@ -1112,7 +1112,7 @@ namespace CoreTest.Migrations
 
                     b.HasKey("Id", "CountryCode");
 
-                    b.HasAlternateKey("CountryCode", "Id");
+                    b.HasAlternateKey("CountryCode");
 
                     b.ToTable("C_Country");
                 });

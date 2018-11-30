@@ -41,5 +41,7 @@ namespace CoreTest.Brands.Dto
         public long? LastModifierUserId { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        public int? TenantId { get; set; }
     }
 }

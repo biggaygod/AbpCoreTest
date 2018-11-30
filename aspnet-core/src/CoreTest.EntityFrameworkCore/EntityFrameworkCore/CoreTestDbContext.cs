@@ -6,6 +6,7 @@ using CoreTest.MultiTenancy;
 using CoreTest.Entities.Customer;
 using CoreTest.Entities.Base;
 
+
 namespace CoreTest.EntityFrameworkCore
 {
     public class CoreTestDbContext : AbpZeroDbContext<Tenant, Role, User, CoreTestDbContext>
