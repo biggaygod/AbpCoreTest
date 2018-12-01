@@ -70,6 +70,7 @@ namespace CoreTest.Brands
 
         public override async Task Delete(EntityDto<int> input)
         {
+            CheckDeletePermission();
             var brand = await Repository.GetAsync(input.Id);
 
             await Repository.DeleteAsync(brand);
@@ -80,20 +81,32 @@ namespace CoreTest.Brands
         {
             CommonMethod method = new CommonMethod();
             var sql = method.BuildSqlWhere(input.where, "dbo.CRM_Brand");
-            var lists = Repository.GetAll().FromSql(sql).Skip(input.SkipCount).Take(input.MaxResultCount).ToList();
-            var items=ObjectMapper.Map<List<BrandDto>>(lists);
+
+            CheckGetAllPermission();
+
+            var query = CreateFilteredQuery(input).FromSql(sql);
+
+            var totalCount = await AsyncQueryableExecuter.CountAsync(query);
+
+            query = ApplySorting(query, input);
+
+            query = ApplyPaging(query, input);
+
+            var entities = await AsyncQueryableExecuter.ToListAsync(query);
+
+            return new PagedResultDto<BrandDto>(
+                totalCount,
+                entities.Select(MapToEntityDto).ToList()
+            );
+        }
+
+        protected override BrandDto MapToEntityDto(Brand entity)
+        {
             var countrys = _countryRepository.GetAll();
-            var country = new Country();
-            foreach (var i in items)
-            {
-                country = countrys.Where(u => u.CountryCode == i.CountryCode).FirstOrDefault();
-                i.CountryName = country == null ? string.Empty : country.CountryName;
-            }
-            return await Task.FromResult(new PagedResultDto<BrandDto>()
-            {
-                TotalCount = input.MaxResultCount,
-                Items= items
-            });
+            var country = countrys.Where(u => u.CountryCode == entity.CountryCode).FirstOrDefault();
+            var item = ObjectMapper.Map<BrandDto>(entity);
+            item.CountryName = country == null ? string.Empty : country.CountryName;
+            return item;
         }
         #endregion
     }

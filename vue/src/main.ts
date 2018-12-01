@@ -1,4 +1,6 @@
 import Vue from 'vue';
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import App from './app.vue';
 import iView from 'iview';
 import {router} from './router/index';
@@ -7,6 +9,7 @@ import './theme.less';
 import Ajax from './lib/ajax';
 import Util from './lib/util';
 import SignalRAspNetCoreHelper from './lib/SignalRAspNetCoreHelper';
+Vue.use(ElementUI)
 Vue.use(iView);
 import store from './store/index';
 Vue.config.productionTip = false;

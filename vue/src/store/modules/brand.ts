@@ -43,9 +43,6 @@ class BrandModule extends ListModule<BrandState,any,Brand>{
         async get(context:ActionContext<BrandState,any>,payload:any){
             let reponse=await Ajax.get('/api/services/app/Brand/Get?Id='+payload.id);
             return reponse.data.result as Brand;
-        },
-        async changeLanguage(context:ActionContext<BrandState,any>,payload:any){
-            await Ajax.post('/api/services/app/User/ChangeLanguage',payload.data);
         }
     };
     mutations={

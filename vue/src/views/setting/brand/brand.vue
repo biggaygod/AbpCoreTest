@@ -16,7 +16,7 @@
                         </Col>
                         <Col span="6">
                             <FormItem :label="L('IsActive')+':'" style="width:100%">
-                                <Select :value="'All'" :placeholder="L('Select')" @on-change="isActiveChange">
+                                <Select :value="null" :placeholder="L('Select')" @on-change="isActiveChange">
                                     <Option value="All">{{L('All')}}</Option>
                                     <Option value="Actived">{{L('Actived')}}</Option>
                                     <Option value="NoActive">{{L('NoActive')}}</Option>
@@ -118,13 +118,25 @@
             title:this.L('CountryCode'),
             key:'countryCode'
         },{
+            title:this.L('CountryName'),
+            key:'countryName'
+        },{
             title:this.L('BrandName'),
             key:'brandName'
+        },{
+            title:this.L('EngName'),
+            key:'engName'
+        },{
+            title:this.L('Spell'),
+            key:'spell'
         },{
             title:this.L('IsActive'),
             render:(h:any,params:any)=>{
                return h('span',params.row.isActive?this.L('Yes'):this.L('No'))
             }
+        },{
+            title:this.L('CreatorUserId'),
+            key:'creatorUserId'
         },{
             title:this.L('CreationTime'),
             key:'creatioTime',
@@ -132,8 +144,11 @@
                 return h('span',new Date(params.row.creationTime).toLocaleDateString())
             }
         },{
-            title:this.L('LastModificationTime'),
-            key:'lastModificationTime',
+            title:this.L('CreatorUserId'),
+            key:'creatorUserId'
+        },{
+            title:this.L('LastModifierUserId'),
+            key:'lastModifierUserId',
             render:(h:any,params:any)=>{
                 return h('span',new Date(params.row.lastModificationTime).toLocaleDateString())
             }

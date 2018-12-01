@@ -25,7 +25,7 @@ namespace CoreTest.Tests.Countrys
         public async Task GetCountrys_Test()
         {
             // Act
-            var output = await _countryAppService.GetAll(new PageResultRequestSearch { MaxResultCount = 20, SkipCount = 0, where = string.Empty, Sorting = null });
+            var output = await _countryAppService.GetAll(new PageResultRequestSearch { MaxResultCount = 20, SkipCount = 0, where = null, Sorting = null });
 
             // Assert
             output.Items.Count.ShouldBeGreaterThan(0);

@@ -115,6 +115,7 @@ export default class Login extends AbpBase {
   .main{
     width: 368px;
     margin: 0 auto;
+    position: relative;
   }
   @media (min-width:768px) {
     .content{

@@ -15,48 +15,5 @@ namespace CoreTest.Common
             sql += where;
             return sql;
         }
-
-        public IList<T> SqlQuery<T>(DbContext db, string sql, params object[] parameters) where T : new()
-        {
-            var conn = db.Database.GetDbConnection();
-            try
-            {
-                conn.Open();
-                using (var command = conn.CreateCommand())
-                {
-                    command.CommandText = sql;
-                    command.Parameters.AddRange(parameters);
-                    var propts = typeof(T).GetProperties();
-                    var rtnList = new List<T>();
-                    T model;
-                    object val;
-                    using (var reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            model = new T();
-                            foreach (var i in propts)
-                            {
-                                val = reader[i.Name];
-                                if (val == DBNull.Value)
-                                {
-                                    i.SetValue(model, null);
-                                }
-                                else
-                                {
-                                    i.SetValue(model, val);
-                                }
-                            }
-                            rtnList.Add(model);
-                        }
-                    }
-                    return rtnList;
-                }
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
     }
 }

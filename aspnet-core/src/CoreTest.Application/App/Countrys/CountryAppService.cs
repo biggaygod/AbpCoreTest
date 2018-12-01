@@ -65,10 +65,24 @@ namespace CoreTest.App.Countrys
         public override async Task<PagedResultDto<CountryDto>> GetAll(PageResultRequestSearch input)
         {
             CommonMethod method = new CommonMethod();
-            var sql = method.BuildSqlWhere(input.where, "C_Country");
-            var lists = Repository.GetAll().Skip(input.SkipCount).Take(input.MaxResultCount);
-            var items = ObjectMapper.Map<List<CountryDto>>(lists);
-            return await Task.FromResult(new PagedResultDto<CountryDto>(input.MaxResultCount, items));
+            var sql = method.BuildSqlWhere(input.where, "dbo.C_Country");
+
+            CheckGetAllPermission();
+
+            var query = CreateFilteredQuery(input).FromSql(sql);
+
+            var totalCount = await AsyncQueryableExecuter.CountAsync(query);
+
+            query = ApplySorting(query, input);
+
+            query = ApplyPaging(query, input);
+
+            var entities = await AsyncQueryableExecuter.ToListAsync(query);
+
+            return new PagedResultDto<CountryDto>(
+                totalCount,
+                entities.Select(MapToEntityDto).ToList()
+            );
         }
         #endregion
     }

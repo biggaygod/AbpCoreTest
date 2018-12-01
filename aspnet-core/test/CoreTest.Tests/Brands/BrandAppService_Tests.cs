@@ -25,7 +25,7 @@ namespace CoreTest.Tests.Brands
         public async void GetBrands_Test()
         {
             // Act
-            var output =await _brandAppService.GetAll(new PageResultRequestSearch { MaxResultCount = 10, SkipCount = 0,where=" 1=1 ",Sorting=null });
+            var output =await _brandAppService.GetAll(new PageResultRequestSearch { MaxResultCount = 10, SkipCount = 0,where=null,Sorting=null });
 
             // Assert
             output.Items.Count.ShouldBeGreaterThan(0);

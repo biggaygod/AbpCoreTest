@@ -21,23 +21,38 @@
     <text name="LogIn" value="登录" />
     
     <text name="LoginFailed" value="登录失败!" />
+    
+    <text name="Add" value="添加" />
+    <text name="Find" value="查找" />
+    <text name="Actions" value="操作" />
+    <text name="Edit" value="编辑" />
+    <text name="Delete" value="删除" />
+    <text name="OK" value="确认" />
+    <text name="Cancel" value="取消" />
 
-    <text name="Brands" value="品牌" />
     <text name="Users" value="用户" />
     <text name="Roles" value="角色" />
     <text name="Tenants" value="租户" />
-
-    
     <text name="CountryCode" value="国家代码" />
-    <text name="BrandName" value="品牌名称" />
-    <text name="EngName" value="英文名称" />
-    <text name="Spell" value="速拼码" />
+    <text name="CountryName" value="国家名称" />
     <text name="IsActive" value="是否激活" />
     <text name="CreationTime" value="创建时间" />
     <text name="CreatorUserId" value="创建人" />
     <text name="LastModificationTime" value="修改时间" />
     <text name="LastModifierUserId" value="修改人" />
     <text name="IsDeleted" value="是否删除" />
+
+    <!--品牌-->
+    <text name="Brands" value="品牌" />
+    <text name="BrandName" value="品牌名称" />
+    <text name="EngName" value="英文名称" />
+    <text name="Spell" value="速拼码" />
+
+    <!--国家-->
+    <text name="Countrys" value="国家" />
+    <text name="CountryShort" value="国家简称" />
+    <text name="ChineseName" value="中文名称" />
+    <text name="EnglishName" value="英文名称" />
 
   </texts>
 </localizationDictionary>
