@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace CoreTest.App.Countrys
 {
-    [AbpAuthorize(PermissionNames.Pages_Countrys)]
+    [AbpAuthorize(PermissionNames.Pages_Customers)]
     public class CountryAppService : AsyncCrudAppService<Country, CountryDto, int, PageResultRequestSearch, CreateCountryDto, CountryDto>, ICountryAppService
     {
         private readonly ICacheManager cacheManager;

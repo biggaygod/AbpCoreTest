@@ -13,6 +13,7 @@ namespace CoreTest.Authorization
             context.CreatePermission(PermissionNames.Pages_Tenants, L("Tenants"), multiTenancySides: MultiTenancySides.Host);
             context.CreatePermission(PermissionNames.Pages_Brands, L("Brands"));
             context.CreatePermission(PermissionNames.Pages_Countrys, L("Countrys"));
+            context.CreatePermission(PermissionNames.Pages_Customers, L("Customers"));
         }
 
         private static ILocalizableString L(string name)

@@ -11,5 +11,7 @@
         public const string Pages_Brands = "Pages.Brands";
 
         public const string Pages_Countrys = "Pages.Countrys";
+
+        public const string Pages_Customers = "Pages.Customers";
     }
 }

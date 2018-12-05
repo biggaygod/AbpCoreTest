@@ -9,8 +9,12 @@
             <Form ref="brandForm"  label-position="top" :rules="brandRule" :model="brand">
                 <Tabs value="detail">
                     <TabPane :label="L('UserDetails')" name="detail">
+                        <FormItem :label="L('CountryName')" prop="countryName">
+                            <countrylist v-model="brand.countryCode">
+                            </countrylist>
+                        </FormItem>
                         <FormItem :label="L('CountryCode')" prop="countryCode">
-                            <Input v-model="brand.countryCode" :maxlength="32" :minlength="2"></Input>
+                            <Input v-model="brand.countryCode" :maxlength="32" :minlength="2" readonly></Input>
                         </FormItem>
                         <FormItem :label="L('BrandName')" prop="brandName">
                             <Input v-model="brand.brandName" :maxlength="32"></Input>
@@ -39,7 +43,10 @@
     import Util from '../../../lib/util'
     import AbpBase from '../../../lib/abpbase'
     import Brand from '../../../store/entities/brand'
-    @Component
+    import countrylist from '../../../components/country-list.vue'
+    @Component({
+        components:{countrylist}
+    })
     export default class CreateBrand extends AbpBase{
         @Prop({type:Boolean,default:false}) value:boolean;
         brand:Brand=new Brand();
@@ -67,6 +74,7 @@
         }
         brandRule={
             countryCode:[{required: true,message:this.L('FieldIsRequired',undefined,this.L('CountryCode')),trigger: 'blur'}],
+            countryName:[{required: true,message:this.L('FieldIsRequired',undefined,this.L('CountryName')),trigger: 'blur'}],
             brandName:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('BrandName')),trigger: 'blur'}],
             engName:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('EngName')),trigger: 'blur'}],
             spell:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Spell')),trigger: 'blur'}]

@@ -10,14 +10,8 @@
                 <Tabs value="detail">
                     <TabPane :label="L('BrandDetails')" name="detail">
                         <FormItem :label="L('CountryCode')" prop="countryCode">
-                            <Input v-model="brand.countryCode" :maxlength="32" :minlength="2"></Input>
+                            <Input v-model="brand.countryCode" :maxlength="32" :minlength="2" enable="false" disabled></Input>
                         </FormItem>
-                        <el-autocomplete
-                            class="input"
-                            v-model="brand.countryCode"
-                            :fetch-suggestions="querySearch"
-                            placeholder="请输入内容"
-                        ></el-autocomplete>
                         <FormItem :label="L('BrandName')" prop="brandName">
                             <Input v-model="brand.brandName" :maxlength="32"></Input>
                         </FormItem>
@@ -81,34 +75,7 @@
             brandName:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('BrandName')),trigger: 'blur'}],
             engName:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('EngName')),trigger: 'blur'}],
             spell:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Spell')),trigger: 'blur'}]
-        }
-
-        querySearch(queryString, cb) {
-        var restaurants = [{
-          value: '选项1',
-          label: '黄金糕'
-        }, {
-          value: '选项2',
-          label: '双皮奶'
-        }, {
-          value: '选项3',
-          label: '蚵仔煎'
-        }, {
-          value: '选项4',
-          label: '龙须面'
-        }, {
-          value: '选项5',
-          label: '北京烤鸭'
-        }];
-        var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants;
-        // 调用 callback 返回建议列表的数据
-        cb(results);
-        }
-        createFilter(queryString) {
-        return (restaurant) => {
-          return (restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
-            };
-        }
+        }       
       }
 </script>
 

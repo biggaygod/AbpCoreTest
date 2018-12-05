@@ -3,7 +3,7 @@
   <texts>
     <text name="HomePage" value="主页" />
     <text name="About" value="关于我们" />
-    <text name="WellcomeMessage" value="欢迎使用 CoreTest!" />
+    <text name="WellcomeMessage" value="欢迎使用 FSO国际版!" />
     <text name="AppName" value="FSO国际版" />
     
     <text name="FormIsNotValidMessage" value="部分输入信息不符合要求，请检查并改正.." />
@@ -19,6 +19,9 @@
     <text name="Password" value="密码" />
     <text name="RememberMe" value="记住我" />
     <text name="LogIn" value="登录" />
+    <text name="FieldIsRequired" value="该项为必填项" />
+    <text name="ConfirmTelNotMatch" value="手机号格式不正确" />
+    <text name="ConfirmEmaiNotMatch" value="电子邮箱格式不正确" />
     
     <text name="LoginFailed" value="登录失败!" />
     

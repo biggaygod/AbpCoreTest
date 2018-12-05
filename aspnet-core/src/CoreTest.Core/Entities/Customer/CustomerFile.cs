@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CoreTest.Entities.Customer
 {
-    [Table("CRM_File")]
+    [Table("CRM_CustomerFile")]
     public class CustomerFile: FullAuditedEntity<int>, IMayHaveTenant
     {
         [Key]

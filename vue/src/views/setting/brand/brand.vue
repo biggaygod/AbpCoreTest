@@ -144,11 +144,11 @@
                 return h('span',new Date(params.row.creationTime).toLocaleDateString())
             }
         },{
-            title:this.L('CreatorUserId'),
-            key:'creatorUserId'
-        },{
             title:this.L('LastModifierUserId'),
-            key:'lastModifierUserId',
+            key:'lastModifierUserId'
+        },{
+            title:this.L('LastModificationTime'),
+            key:'lastModificationTime',
             render:(h:any,params:any)=>{
                 return h('span',new Date(params.row.lastModificationTime).toLocaleDateString())
             }

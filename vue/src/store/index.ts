@@ -9,6 +9,7 @@ import role from './modules/role'
 import tenant from './modules/tenant'
 import brand from './modules/brand'
 import country from './modules/country'
+import customer from './modules/customer'
 const store = new Vuex.Store({
     state: {
         //
@@ -27,7 +28,8 @@ const store = new Vuex.Store({
         role,
         tenant,
         brand,
-        country
+        country,
+        customer
     }
 });
 

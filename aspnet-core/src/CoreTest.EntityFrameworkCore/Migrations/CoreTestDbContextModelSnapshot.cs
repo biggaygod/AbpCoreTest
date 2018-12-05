@@ -1588,7 +1588,7 @@ namespace CoreTest.Migrations
 
                     b.HasAlternateKey("CountryCode", "Id");
 
-                    b.ToTable("CRM_File");
+                    b.ToTable("CRM_CustomerFile");
                 });
 
             modelBuilder.Entity("CoreTest.MultiTenancy.Tenant", b =>
