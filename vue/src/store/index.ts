@@ -10,6 +10,9 @@ import tenant from './modules/tenant'
 import brand from './modules/brand'
 import country from './modules/country'
 import customer from './modules/customer'
+import customerbrand from './modules/customerbrand'
+import customerfile from './modules/customerfile'
+import customercontact from './modules/customercontact'
 const store = new Vuex.Store({
     state: {
         //
@@ -29,7 +32,10 @@ const store = new Vuex.Store({
         tenant,
         brand,
         country,
-        customer
+        customer,
+        customerbrand,
+        customerfile,
+        customercontact
     }
 });
 

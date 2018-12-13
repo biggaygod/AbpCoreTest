@@ -21,14 +21,16 @@ namespace CoreTest.App.Customers
     public class CustomerBrandAppService : AsyncCrudAppService<CustomerBrand, CustomerBrandDto, int, PageResultRequestSearch, CreateCustomerBrandDto, CustomerBrandDto>, IApplicationService, ICustomerBrandAppService
     {
         private readonly ICacheManager _cacheManager;
-
+        private readonly IRepository<Brand, int> _brandRepository;
 
 
         public CustomerBrandAppService(IRepository<CustomerBrand, int> repository,
-            ICacheManager cacheManager
+            ICacheManager cacheManager,
+            IRepository<Brand, int> brandRepository
             ) : base(repository)
         {
             _cacheManager = cacheManager;
+            _brandRepository = brandRepository;
         }
 
         #region 增删改查
@@ -39,6 +41,7 @@ namespace CoreTest.App.Customers
             var CustomerBrand = ObjectMapper.Map<CustomerBrand>(input);
 
             CustomerBrand.TenantId = AbpSession.TenantId;
+            CustomerBrand.CountryCode = _brandRepository.Get(input.BrandId).CountryCode;
 
             await Repository.InsertAsync(CustomerBrand);
 

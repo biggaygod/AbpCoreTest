@@ -22,13 +22,15 @@ namespace CoreTest.App.Customers
     {
         private readonly ICacheManager _cacheManager;
 
-
+        private readonly IRepository<Customer> _customerRepository;
 
         public CustomerContactAppService(IRepository<CustomerContact, int> repository,
-            ICacheManager cacheManager
+            ICacheManager cacheManager,
+            IRepository<Customer> customerRepository
             ) : base(repository)
         {
             _cacheManager = cacheManager;
+            _customerRepository = customerRepository;
         }
 
         #region 增删改查
@@ -39,6 +41,7 @@ namespace CoreTest.App.Customers
             var CustomerContact = ObjectMapper.Map<CustomerContact>(input);
 
             CustomerContact.TenantId = AbpSession.TenantId;
+            CustomerContact.CountryCode = _customerRepository.Get(input.CustomerId).CountryCode;
 
             await Repository.InsertAsync(CustomerContact);
 

@@ -17,8 +17,8 @@ namespace CoreTest.App.Customers.Dto
 
         public string CountryName { get; set; }
 
-        public int? BrandId { get; set; }
+        public int BrandId { get; set; }
 
-        public int? CustomerId { get; set; }
+        public int CustomerId { get; set; }
     }
 }

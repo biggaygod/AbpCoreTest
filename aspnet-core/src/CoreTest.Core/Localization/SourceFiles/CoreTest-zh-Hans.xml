@@ -22,6 +22,7 @@
     <text name="FieldIsRequired" value="该项为必填项" />
     <text name="ConfirmTelNotMatch" value="手机号格式不正确" />
     <text name="ConfirmEmaiNotMatch" value="电子邮箱格式不正确" />
+    <text name="ConfirmBrandRepeat" value="关联品牌重复" />
     
     <text name="LoginFailed" value="登录失败!" />
     
@@ -32,6 +33,7 @@
     <text name="Delete" value="删除" />
     <text name="OK" value="确认" />
     <text name="Cancel" value="取消" />
+    <text name="Relative" value="关联信息" />
 
     <text name="Users" value="用户" />
     <text name="Roles" value="角色" />
@@ -56,6 +58,29 @@
     <text name="CountryShort" value="国家简称" />
     <text name="ChineseName" value="中文名称" />
     <text name="EnglishName" value="英文名称" />
+    
+    <!--客户-->
+    <text name="CustomerRelation" value="客户关联信息" />
+    <text name="Customers" value="客户" />
+    <text name="CustomerCode" value="客户代码" />
+    <text name="CustomerName" value="客户名称" />
+    <text name="Address" value="地址" />
+    <text name="Phone" value="电话" />
+    <text name="CustomerId" value="客户ID" />
+    <text name="BrandId" value="品牌ID" />
+    <text name="CustomerBrand" value="客户关联品牌" />
+    <text name="CustomerFile" value="客户关联文件" />
+    <text name="CustomerContact" value="客户联系方式" />
+    <text name="ContactName" value="联系人名称" />
+    <text name="Position" value="职位" />
+    <text name="TelePhone" value="联系电话" />
+    <text name="Email" value="电子邮箱" />
+    <text name="FilePath" value="文件路径" />
+    <text name="FileName" value="文件名称" />
+    <text name="CreateNewContactCustomer" value="创建联系方式" />
+    <text name="CreateNewBrandCustomer" value="创建品牌关联" />
+    <text name="CreateNewFileCustomer" value="上传关联文件" />
+    <text name="UploadFiles" value="上传文件" />
 
   </texts>
 </localizationDictionary>

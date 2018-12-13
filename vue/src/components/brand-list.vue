@@ -19,7 +19,7 @@ export default class BrandList extends AbpBase {
     async getBrands(){
             let where= null;
             let pagerequest=new PageRequest();
-            pagerequest.maxResultCount=1000;
+            pagerequest.maxResultCount=1000000;
             pagerequest.skipCount=0;
             pagerequest.where=where;
             await this.$store.dispatch({
