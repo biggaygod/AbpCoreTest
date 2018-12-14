@@ -52,4 +52,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\upload\" />
+  </ItemGroup>
 </Project>

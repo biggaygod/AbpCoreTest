@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CoreTest.App.Customers.Dto
 {
-    [AutoMapTo(typeof(CustomerBrand))]
+    [AutoMapTo(typeof(CustomerFile))]
     public class CreateCustomerFileDto
     {
         public int? Id { get; set; }
@@ -17,7 +17,7 @@ namespace CoreTest.App.Customers.Dto
 
         public string CountryName { get; set; }
 
-        public int? CustomerId { get; set; }
+        public int CustomerId { get; set; }
 
         public string FilePath { get; set; }
 

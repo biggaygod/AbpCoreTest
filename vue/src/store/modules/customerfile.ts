@@ -31,7 +31,7 @@ class CustomerFileModule extends ListModule<CustomerFileState,any,CustomerFile>{
             context.state.list=page.items;
         },
         async create(context:ActionContext<CustomerFileState,any>,payload:any){
-            await Ajax.post('/api/services/app/CustomerFile/Create',payload.data);
+            await Ajax.post('/api/Files/CreateCustomerFile',payload.data,{ });
         },
         async update(context:ActionContext<CustomerFileState,any>,payload:any){
             await Ajax.put('/api/services/app/CustomerFile/Update',payload.data);

@@ -17,34 +17,35 @@ using System.Threading.Tasks;
 
 namespace CoreTest.App.Customers
 {
-    [AbpAuthorize(PermissionNames.Pages_Customers)]
     public class CustomerFileAppService : AsyncCrudAppService<CustomerFile, CustomerFileDto, int, PageResultRequestSearch, CreateCustomerFileDto, CustomerFileDto>, IApplicationService, ICustomerFileAppService
     {
         private readonly ICacheManager _cacheManager;
-
+        private readonly IRepository<Customer> _customerRepository;
 
 
         public CustomerFileAppService(IRepository<CustomerFile, int> repository,
-            ICacheManager cacheManager
+            ICacheManager cacheManager,
+            IRepository<Customer> customerRepository
             ) : base(repository)
         {
             _cacheManager = cacheManager;
+            _customerRepository = customerRepository;
         }
 
         #region 增删改查
         public override async Task<CustomerFileDto> Create(CreateCustomerFileDto input)
         {
-            CheckCreatePermission();
-
             var CustomerFile = ObjectMapper.Map<CustomerFile>(input);
 
             CustomerFile.TenantId = AbpSession.TenantId;
+            CustomerFile.CountryCode = _customerRepository.Get(input.CustomerId).CountryCode;
 
             await Repository.InsertAsync(CustomerFile);
 
             return MapToEntityDto(CustomerFile);
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Customers)]
         public override async Task<CustomerFileDto> Update(CustomerFileDto input)
         {
             CheckUpdatePermission();
@@ -58,6 +59,7 @@ namespace CoreTest.App.Customers
             return await Get(input);
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Customers)]
         public override async Task Delete(EntityDto<int> input)
         {
             CheckDeletePermission();
