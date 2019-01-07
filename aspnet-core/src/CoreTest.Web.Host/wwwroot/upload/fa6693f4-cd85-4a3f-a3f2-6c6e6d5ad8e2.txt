@@ -1,0 +1,15 @@
+邮箱地址：liuhongji@focusmedia.cn
+座机：021 2216 4226
+SVN账号：liuhongji
+工号：E0012921
+UB：uniqueindex
+readmine账号:liuhongji
+itop账号：liuhongji
+域：用户名：focuskingdee\liuhongji 密码：4rfvCDE#
+JIRA:liuhongji
+
+我们的项目地址：http://192.168.4.58:8443/svn/FSA
+数据库设计：http://192.168.5.14/fsales/
+变更管理：http://192.168.4.43/iTop/
+开发记录：http://192.168.4.41/redmine/
+

@@ -51,7 +51,7 @@ namespace CoreTest.Controllers
 
                     using (var stream = new FileStream(webRootPath + filePath, FileMode.Create))
                     {
-                        await file.CopyToAsync(stream);
+                        file.CopyTo(stream);
                     }
                     await iCustomerFileAppService.Create(new CreateCustomerFileDto()
                     {
