@@ -3,6 +3,7 @@ using CoreTest.App.Customers.Dto;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.StaticFiles;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -47,7 +48,7 @@ namespace CoreTest.Controllers
                     string fileExt = Path.GetExtension(file.FileName); //文件扩展名，不含“.”
                     long fileSize = file.Length; //获得文件大小，以字节为单位
                     string newFileName = Guid.NewGuid().ToString() + fileExt; //随机生成新的文件名
-                    var filePath ="/upload/" + newFileName;
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"upload")+ newFileName;
 
                     using (var stream = new FileStream(webRootPath + filePath, FileMode.Create))
                     {
@@ -61,6 +62,22 @@ namespace CoreTest.Controllers
                     });
                 }
             }
+        }
+
+        /// <summary>
+        /// 文件流的方式输出        /// </summary>
+        /// <returns></returns>
+        public IActionResult DownLoad(string file)
+        {
+            string webRootPath = ihostingEnvironment.WebRootPath;
+            var filePath = "/upload/" + file;
+            var addrUrl = webRootPath+filePath;
+            var stream = System.IO.File.OpenRead(addrUrl);
+            string fileExt = Path.GetExtension(file);
+            //获取文件的ContentType
+            var provider = new FileExtensionContentTypeProvider();
+            var memi = provider.Mappings[fileExt];
+            return File(stream, memi, Path.GetFileName(addrUrl)); 
         }
     }
 }

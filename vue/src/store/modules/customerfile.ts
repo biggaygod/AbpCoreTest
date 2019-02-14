@@ -42,6 +42,9 @@ class CustomerFileModule extends ListModule<CustomerFileState,any,CustomerFile>{
         async get(context:ActionContext<CustomerFileState,any>,payload:any){
             let reponse=await Ajax.get('/api/services/app/CustomerFile/Get?Id='+payload.id);
             return reponse.data.result as CustomerFile;
+        },
+        async download(context:ActionContext<CustomerFileState,any>,payload:any){
+            await Ajax.get('/api/Files/DownLoadCustomerFile?file='+payload.FileName);
         }
     };
     mutations={

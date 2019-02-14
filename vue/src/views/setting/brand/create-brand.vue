@@ -74,7 +74,6 @@
         }
         brandRule={
             countryCode:[{required: true,message:this.L('FieldIsRequired',undefined,this.L('CountryCode')),trigger: 'blur'}],
-            countryName:[{required: true,message:this.L('FieldIsRequired',undefined,this.L('CountryName')),trigger: 'blur'}],
             brandName:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('BrandName')),trigger: 'blur'}],
             engName:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('EngName')),trigger: 'blur'}],
             spell:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Spell')),trigger: 'blur'}]

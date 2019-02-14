@@ -30,6 +30,7 @@
     <text name="Find" value="查找" />
     <text name="Actions" value="操作" />
     <text name="Edit" value="编辑" />
+    <text name="DownLoad" value="下载" />
     <text name="Delete" value="删除" />
     <text name="OK" value="确认" />
     <text name="Cancel" value="取消" />

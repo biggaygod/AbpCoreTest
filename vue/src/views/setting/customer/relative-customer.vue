@@ -373,12 +373,11 @@ export default class RelativeCustomer extends AbpBase {
               },
               on: {
                 click: () => {
-                  this.$store.commit("customerfile/edit", params.row);
-                  this.edit(3);
+                  this.$store.commit("customerfile/download", params.row);
                 }
               }
             },
-            this.L("Edit")
+            this.L("DownLoad")
           ),
           h(
             "Button",
