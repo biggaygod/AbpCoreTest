@@ -372,12 +372,12 @@ export default class RelativeCustomer extends AbpBase {
                 marginRight: "5px"
               },
               on: {
-                click: () => {
-                  this.$store.commit("customerfile/download", params.row);
+                click: async () => {
+                  await this.$store.dispatch( {type:"customerfile/view", data:params.row});
                 }
               }
             },
-            this.L("DownLoad")
+            this.L("View")
           ),
           h(
             "Button",

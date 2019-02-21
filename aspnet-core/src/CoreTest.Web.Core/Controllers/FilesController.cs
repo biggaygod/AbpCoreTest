@@ -48,7 +48,7 @@ namespace CoreTest.Controllers
                     string fileExt = Path.GetExtension(file.FileName); //文件扩展名，不含“.”
                     long fileSize = file.Length; //获得文件大小，以字节为单位
                     string newFileName = Guid.NewGuid().ToString() + fileExt; //随机生成新的文件名
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"upload")+ newFileName;
+                    var filePath = "/upload/"+ newFileName;
 
                     using (var stream = new FileStream(webRootPath + filePath, FileMode.Create))
                     {
@@ -67,17 +67,19 @@ namespace CoreTest.Controllers
         /// <summary>
         /// 文件流的方式输出        /// </summary>
         /// <returns></returns>
-        public IActionResult DownLoad(string file)
+        [HttpPost]
+        public ContentResult ViewCustomerFile(string file)
         {
-            string webRootPath = ihostingEnvironment.WebRootPath;
-            var filePath = "/upload/" + file;
-            var addrUrl = webRootPath+filePath;
-            var stream = System.IO.File.OpenRead(addrUrl);
-            string fileExt = Path.GetExtension(file);
-            //获取文件的ContentType
-            var provider = new FileExtensionContentTypeProvider();
-            var memi = provider.Mappings[fileExt];
-            return File(stream, memi, Path.GetFileName(addrUrl)); 
+            var addrUrl = ihostingEnvironment.WebRootPath+ "/upload/" + file;
+            ////var stream = new FileStream(addrUrl,FileMode.Open);           
+            //string fileExt = Path.GetExtension(file);
+            ////获取文件的ContentType
+            //var provider = new FileExtensionContentTypeProvider();
+            //var memi = provider.Mappings[fileExt];
+            //string content = System.IO.File.ReadAllText(addrUrl,Encoding.GetEncoding("gb2312"));
+            //byte[] fileBytes = Encoding.UTF8.GetBytes(content); 
+            //return File(fileBytes, memi, addrUrl);
+            return Content(addrUrl);
         }
     }
 }

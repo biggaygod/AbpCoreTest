@@ -127,15 +127,15 @@ namespace CoreTest.Web.Host.Startup
                     .GetManifestResourceStream("CoreTest.Web.Host.wwwroot.swagger.ui.index.html");
             }); // URL: /swagger
 
-            RewriteOptions options2 = new RewriteOptions()
-            .AddRewrite("^(.*)/(.*)$", "xmlOption/Get/$2.$1", true)
-            .AddRedirect("^sf/(.*).xml", "xml/$1");//$1--bug
-            app.UseRewriter(options2);
+            //RewriteOptions options2 = new RewriteOptions()
+            //.AddRewrite("^(.*)/(.*)$", "xmlOption/Get/$2.$1", true)
+            //.AddRedirect("^sf/(.*).xml", "xml/$1");//$1--bug
+            //app.UseRewriter(options2);
 
-            StaticFileOptions so = new StaticFileOptions();
-            so.FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"upload"));//这里的文件名称是真实的文件名称
-            so.RequestPath = "/upload";//这里的/sf就是程序中映射的路径
-            app.UseStaticFiles(so);
+            //StaticFileOptions so = new StaticFileOptions();
+            //so.FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\upload"));//这里的文件名称是真实的文件名称
+            //so.RequestPath = "/upload";//这里的/sf就是程序中映射的路径
+            //app.UseStaticFiles(so);
         }
     }
 }

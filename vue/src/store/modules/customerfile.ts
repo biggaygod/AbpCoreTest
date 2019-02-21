@@ -5,6 +5,7 @@ import CustomerFile from '../entities/customerfile'
 import Ajax from '../../lib/ajax'
 import PageResult from '@/store/entities/page-result';
 import ListMutations from './list-mutations'
+import url from '../../lib/url'
 
 interface CustomerFileState extends ListState<CustomerFile>{
     editCustomerFile:CustomerFile
@@ -43,8 +44,9 @@ class CustomerFileModule extends ListModule<CustomerFileState,any,CustomerFile>{
             let reponse=await Ajax.get('/api/services/app/CustomerFile/Get?Id='+payload.id);
             return reponse.data.result as CustomerFile;
         },
-        async download(context:ActionContext<CustomerFileState,any>,payload:any){
-            await Ajax.get('/api/Files/DownLoadCustomerFile?file='+payload.FileName);
+        async view(context:ActionContext<CustomerFileState,any>,payload:any){
+            //let reponse=await Ajax.post('/api/Files/ViewCustomerFile?file='+payload.data.fileName);   
+            window.location.href=url+ "/upload/"+payload.data.fileName;          
         }
     };
     mutations={
