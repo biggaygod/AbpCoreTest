@@ -13,8 +13,11 @@
                 disabled
               ></Input>
             </FormItem>
-            <FormItem :label="L('CustomerName')" prop="CustomerName">
+            <FormItem :label="L('CustomerName')" prop="customerName">
               <Input v-model="Customer.customerName" :maxlength="32"></Input>
+            </FormItem>
+            <FormItem :label="L('CustomerCode')" prop="customerCode">
+              <Input v-model="Customer.customerCode" :maxlength="32"></Input>
             </FormItem>
             <FormItem :label="L('EngName')" prop="engName">
               <Input v-model="Customer.engName" :maxlength="1024"></Input>
@@ -49,7 +52,7 @@ export default class EditCustomer extends AbpBase {
     (this.$refs.CustomerForm as any).validate(async (valid: boolean) => {
       if (valid) {
         await this.$store.dispatch({
-          type: "Customer/update",
+          type: "customer/update",
           data: this.Customer
         });
         (this.$refs.CustomerForm as any).resetFields();
@@ -77,10 +80,17 @@ export default class EditCustomer extends AbpBase {
         trigger: "blur"
       }
     ],
-    CustomerName: [
+    customerName: [
       {
         required: true,
         message: this.L("FieldIsRequired", undefined, this.L("CustomerName")),
+        trigger: "blur"
+      }
+    ],
+    customerCode: [
+      {
+        required: true,
+        message: this.L("FieldIsRequired", undefined, this.L("CustomerCode")),
         trigger: "blur"
       }
     ],

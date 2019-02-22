@@ -20245,3 +20245,652 @@ INFO  2019-02-21 17:49:30,679 [12   ] soft.AspNetCore.Hosting.Internal.WebHost -
 INFO  2019-02-21 17:49:30,703 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2019-02-21 17:49:30,703 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) in 80.9138ms
 INFO  2019-02-21 17:49:30,704 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 87.5385ms 200 application/json; charset=utf-8
+DEBUG 2019-02-21 17:50:15,885 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-02-21 17:50:16,723 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-02-21 17:50:16,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CoreTest.Web.Host.Startup.CoreTestWebHostModule, CoreTest.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,768 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CoreTest.CoreTestWebCoreModule, CoreTest.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,768 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CoreTest.CoreTestApplicationModule, CoreTest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,769 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CoreTest.CoreTestCoreModule, CoreTest.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,771 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,772 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CoreTest.EntityFrameworkCore.CoreTestEntityFrameworkModule, CoreTest.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:16,828 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-02-21 17:50:16,949 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-02-21 17:50:16,949 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-02-21 17:50:16,949 [1    ] o.Configuration.LanguageManagementConfig - Converted CoreTest (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-02-21 17:50:16,949 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-02-21 17:50:17,597 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: CoreTest.EntityFrameworkCore.CoreTestDbContext, CoreTest.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-02-21 17:50:19,412 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-02-21 17:50:19,479 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-02-21 17:50:19,528 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-02-21 17:50:19,572 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CoreTest
+DEBUG 2019-02-21 17:50:19,631 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-02-21 17:50:19,880 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-02-21 17:50:19,956 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 22 classes define auto mapping attributes
+DEBUG 2019-02-21 17:50:19,956 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-02-21 17:50:19,969 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Users.Dto.CreateUserDto
+DEBUG 2019-02-21 17:50:19,970 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Users.Dto.UserDto
+DEBUG 2019-02-21 17:50:19,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-02-21 17:50:19,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-02-21 17:50:19,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Roles.Dto.CreateRoleDto
+DEBUG 2019-02-21 17:50:19,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Roles.Dto.PermissionDto
+DEBUG 2019-02-21 17:50:19,972 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Roles.Dto.RoleDto
+DEBUG 2019-02-21 17:50:19,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-02-21 17:50:19,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.MultiTenancy.Dto.TenantDto
+DEBUG 2019-02-21 17:50:19,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Customers.Dto.CreateCustomerBrandDto
+DEBUG 2019-02-21 17:50:19,974 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Customers.Dto.CreateCustomerContactDto
+DEBUG 2019-02-21 17:50:19,974 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Customers.Dto.CreateCustomerDto
+DEBUG 2019-02-21 17:50:19,974 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Customers.Dto.CreateCustomerFileDto
+DEBUG 2019-02-21 17:50:19,974 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Customers.Dto.CustomerBrandDto
+DEBUG 2019-02-21 17:50:19,974 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Customers.Dto.CustomerContactDto
+DEBUG 2019-02-21 17:50:19,975 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Customers.Dto.CustomerDto
+DEBUG 2019-02-21 17:50:19,976 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Customers.Dto.CustomerFileDto
+DEBUG 2019-02-21 17:50:19,977 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Countrys.Dto.CountryDto
+DEBUG 2019-02-21 17:50:19,977 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.App.Countrys.Dto.CreateCountryDto
+DEBUG 2019-02-21 17:50:19,977 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Brands.Dto.BrandDto
+DEBUG 2019-02-21 17:50:19,977 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CoreTest.Brands.Dto.CreateBrandDto
+INFO  2019-02-21 17:50:27,456 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-02-21 17:50:27,456 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2019-02-21 17:50:27,582 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 137.1297ms 200 
+INFO  2019-02-21 17:50:32,385 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action CoreTest.Web.Host.Controllers.HomeController.Index (CoreTest.Web.Host)
+INFO  2019-02-21 17:50:33,655 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Web.Host.Controllers.HomeController.Index (CoreTest.Web.Host) - Validation state: Valid
+INFO  2019-02-21 17:50:33,663 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Web.Host.Controllers.HomeController.Index (CoreTest.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 4.1752ms.
+INFO  2019-02-21 17:50:34,036 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-02-21 17:50:34,055 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Web.Host.Controllers.HomeController.Index (CoreTest.Web.Host) in 1662.4763ms
+INFO  2019-02-21 17:50:34,087 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6645.1865ms 302 
+INFO  2019-02-21 17:50:34,207 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-02-21 17:50:34,251 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 44.4137ms 200 text/html
+INFO  2019-02-21 17:50:34,344 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-02-21 17:50:34,411 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-02-21 17:50:34,431 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-02-21 17:50:34,466 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-02-21 17:50:34,469 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-02-21 17:50:34,476 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 64.8039ms 304 application/javascript
+INFO  2019-02-21 17:50:34,482 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 45.4978ms 304 application/javascript
+INFO  2019-02-21 17:50:34,543 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2019-02-21 17:50:34,558 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 210.325ms 200 text/css
+INFO  2019-02-21 17:50:34,800 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/favicon-32x32.png  
+INFO  2019-02-21 17:50:34,809 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2019-02-21 17:50:34,813 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.1235ms 200 image/png
+INFO  2019-02-21 17:50:34,862 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-02-21 17:50:35,012 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:50:35,462 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 593.4967ms 200 application/json;charset=utf-8
+INFO  2019-02-21 17:51:18,108 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:51:18,138 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:18,153 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 44.2993ms 204 
+INFO  2019-02-21 17:51:18,267 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:51:18,275 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:18,280 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:51:18,306 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-02-21 17:51:18,309 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:18,355 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-02-21 17:51:24,336 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 5978.4091ms.
+INFO  2019-02-21 17:51:24,767 [15   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:51:24,874 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 6561.9324ms
+INFO  2019-02-21 17:51:24,884 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6616.2634ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:51:25,109 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:51:25,181 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:25,191 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 91.0587ms 204 
+INFO  2019-02-21 17:51:25,209 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:51:25,216 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:25,221 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:51:25,256 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application)
+INFO  2019-02-21 17:51:25,263 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:26,158 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) - Validation state: Valid
+INFO  2019-02-21 17:51:26,305 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 144.4778ms.
+INFO  2019-02-21 17:51:26,345 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:51:26,382 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) in 1121.6477ms
+INFO  2019-02-21 17:51:26,387 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1180.0343ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:51:26,763 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:51:26,802 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:26,806 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:51:26,808 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:51:26,823 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:26,831 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 47.5809ms 204 
+INFO  2019-02-21 17:51:26,836 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 57.961ms 204 
+INFO  2019-02-21 17:51:26,858 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:26,887 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.6204ms 204 
+INFO  2019-02-21 17:51:26,898 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:51:26,902 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:51:26,907 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:26,921 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:26,929 [13   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:51:26,935 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:51:26,983 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:51:26,989 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:27,001 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:51:27,039 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Customer"}. Executing action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:51:27,053 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Country"}. Executing action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:51:27,057 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:27,087 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:27,123 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Brand"}. Executing action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:51:27,200 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:29,554 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:51:29,555 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:51:29,558 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:51:30,359 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 798.4567ms.
+INFO  2019-02-21 17:51:30,366 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 807.3552ms.
+INFO  2019-02-21 17:51:30,382 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 819.4774ms.
+INFO  2019-02-21 17:51:30,657 [18   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:51:30,668 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) in 3542.4141ms
+INFO  2019-02-21 17:51:30,683 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3697.6956ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:51:30,685 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:51:30,692 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:51:30,707 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) in 3649.9425ms
+INFO  2019-02-21 17:51:30,718 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3827.5112ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:51:30,731 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) in 3679.9614ms
+INFO  2019-02-21 17:51:30,752 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3858.4616ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:51:32,390 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:51:32,397 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:32,404 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16.8627ms 204 
+INFO  2019-02-21 17:51:32,521 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:51:32,523 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:32,527 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:51:32,757 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerBrand"}. Executing action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:51:32,767 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:33,335 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:51:33,489 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 151.7375ms.
+INFO  2019-02-21 17:51:33,596 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:51:33,604 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) in 844.3064ms
+INFO  2019-02-21 17:51:33,613 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1090.0879ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:51:33,673 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:51:33,676 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:33,679 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.5402ms 204 
+INFO  2019-02-21 17:51:33,686 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:51:33,689 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:33,693 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:51:33,703 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerContact"}. Executing action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:51:33,706 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:34,508 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:51:34,660 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 147.5222ms.
+INFO  2019-02-21 17:51:34,759 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:51:34,768 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) in 1062.1997ms
+INFO  2019-02-21 17:51:34,772 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1085.8877ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:51:34,826 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:51:34,830 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:34,833 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.3249ms 204 
+INFO  2019-02-21 17:51:34,871 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:51:34,874 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:34,879 [13   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:51:34,896 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerFile"}. Executing action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:51:34,902 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:35,389 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:51:35,534 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 143.2016ms.
+INFO  2019-02-21 17:51:35,631 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:51:35,642 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) in 741.4151ms
+INFO  2019-02-21 17:51:35,647 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 775.6349ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:51:39,425 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/Files/ViewCustomerFile?file=d7c4cd8b-343a-46ca-b6c9-f71c2504c163.txt  
+INFO  2019-02-21 17:51:39,431 [7    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:39,434 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.9825ms 204 
+INFO  2019-02-21 17:51:39,448 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/Files/ViewCustomerFile?file=d7c4cd8b-343a-46ca-b6c9-f71c2504c163.txt  0
+INFO  2019-02-21 17:51:39,452 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:39,456 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:51:39,473 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "ViewCustomerFile", controller = "Files", area = ""}. Executing action CoreTest.Controllers.FilesController.ViewCustomerFile (CoreTest.Web.Core)
+INFO  2019-02-21 17:51:39,490 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:51:39,540 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Controllers.FilesController.ViewCustomerFile (CoreTest.Web.Core) with arguments (d7c4cd8b-343a-46ca-b6c9-f71c2504c163.txt) - Validation state: Valid
+INFO  2019-02-21 17:51:43,118 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Controllers.FilesController.ViewCustomerFile (CoreTest.Web.Core), returned result Microsoft.AspNetCore.Mvc.ContentResult in 3575.2961ms.
+INFO  2019-02-21 17:51:44,968 [15   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+INFO  2019-02-21 17:51:44,977 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Controllers.FilesController.ViewCustomerFile (CoreTest.Web.Core) in 5498.2416ms
+INFO  2019-02-21 17:51:44,983 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5539.0664ms 200 text/plain; charset=utf-8
+INFO  2019-02-21 17:54:24,526 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-02-21 17:54:24,536 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action CoreTest.Web.Host.Controllers.HomeController.Index (CoreTest.Web.Host)
+INFO  2019-02-21 17:54:24,603 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Web.Host.Controllers.HomeController.Index (CoreTest.Web.Host) - Validation state: Valid
+INFO  2019-02-21 17:54:24,606 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Web.Host.Controllers.HomeController.Index (CoreTest.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 0.0166ms.
+INFO  2019-02-21 17:54:24,685 [29   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-02-21 17:54:24,689 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Web.Host.Controllers.HomeController.Index (CoreTest.Web.Host) in 149.7435ms
+INFO  2019-02-21 17:54:24,699 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 166.2658ms 302 
+INFO  2019-02-21 17:54:24,769 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-02-21 17:54:24,786 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.9493ms 200 text/html
+INFO  2019-02-21 17:54:24,919 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-02-21 17:54:24,925 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-02-21 17:54:24,941 [29   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-02-21 17:54:24,949 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-02-21 17:54:24,990 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25.1106ms 304 application/javascript
+INFO  2019-02-21 17:54:25,023 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-02-21 17:54:25,032 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.038ms 304 application/javascript
+INFO  2019-02-21 17:54:25,100 [25   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2019-02-21 17:54:25,140 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 133.2606ms 200 text/css
+INFO  2019-02-21 17:54:25,895 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-02-21 17:54:25,905 [13   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:54:25,992 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 111.5999ms 200 application/json;charset=utf-8
+INFO  2019-02-21 17:54:37,551 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/upload/d7c4cd8b-343a-46ca-b6c9-f71c2504c163.txt  
+INFO  2019-02-21 17:54:37,616 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/upload/d7c4cd8b-343a-46ca-b6c9-f71c2504c163.txt'. Physical path: 'D:\项目\GitAbpTest\aspnet-core\src\CoreTest.Web.Host\wwwroot\upload\d7c4cd8b-343a-46ca-b6c9-f71c2504c163.txt'
+INFO  2019-02-21 17:54:37,627 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 69.3439ms 200 text/plain
+INFO  2019-02-21 17:54:37,669 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/favicon.ico  
+INFO  2019-02-21 17:54:37,680 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.9699ms 404 
+INFO  2019-02-21 17:55:31,537 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:55:31,543 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:31,553 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.5452ms 204 
+INFO  2019-02-21 17:55:31,578 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:55:31,583 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:31,588 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:31,600 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-02-21 17:55:31,604 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:31,706 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-02-21 17:55:31,727 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 17.8369ms.
+INFO  2019-02-21 17:55:31,824 [19   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:31,827 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 224.5998ms
+INFO  2019-02-21 17:55:31,835 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 254.004ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:55:31,907 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:55:31,917 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:31,926 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.0256ms 204 
+INFO  2019-02-21 17:55:31,970 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:55:31,976 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:31,983 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:31,992 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application)
+INFO  2019-02-21 17:55:31,995 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:32,067 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) - Validation state: Valid
+INFO  2019-02-21 17:55:32,187 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 118.385ms.
+INFO  2019-02-21 17:55:32,198 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:32,201 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) in 205.467ms
+INFO  2019-02-21 17:55:32,206 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 236.2324ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:55:35,572 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:55:35,573 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:55:35,577 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:55:35,584 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:35,594 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:35,602 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.3066ms 204 
+INFO  2019-02-21 17:55:35,605 [24   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:35,610 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25.5441ms 204 
+INFO  2019-02-21 17:55:35,618 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 39.8948ms 204 
+INFO  2019-02-21 17:55:35,633 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:55:35,642 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:55:35,663 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:55:35,667 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:35,669 [39   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:35,672 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:35,675 [39   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:35,677 [29   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:35,686 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:35,737 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Customer"}. Executing action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:55:35,740 [39   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Country"}. Executing action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:55:35,744 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:35,750 [39   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:35,791 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Brand"}. Executing action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:55:35,794 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:55:35,795 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:35,870 [39   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:55:35,954 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:55:36,206 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 281.8933ms.
+INFO  2019-02-21 17:55:36,367 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 567.7532ms.
+INFO  2019-02-21 17:55:36,493 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 534.3459ms.
+INFO  2019-02-21 17:55:36,654 [21   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:36,656 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:36,706 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) in 917.7121ms
+INFO  2019-02-21 17:55:36,707 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) in 915.1642ms
+INFO  2019-02-21 17:55:36,722 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1074.2249ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:55:36,734 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1097.1657ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:55:36,737 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:36,743 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) in 946.5688ms
+INFO  2019-02-21 17:55:36,757 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1107.5292ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:55:38,197 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:55:38,201 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:38,205 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.1137ms 204 
+INFO  2019-02-21 17:55:38,211 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:55:38,215 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:38,218 [29   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:38,224 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerBrand"}. Executing action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:55:38,227 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:38,282 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:55:38,493 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 205.9009ms.
+INFO  2019-02-21 17:55:38,627 [29   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:38,635 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) in 403.3119ms
+INFO  2019-02-21 17:55:38,642 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 428.0639ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:55:38,688 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:55:38,694 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:38,714 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.9143ms 204 
+INFO  2019-02-21 17:55:38,723 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:55:38,729 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:38,734 [21   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:38,743 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerContact"}. Executing action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:55:38,746 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:38,778 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:55:38,906 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 123.0976ms.
+INFO  2019-02-21 17:55:39,012 [21   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:39,016 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) in 269.2666ms
+INFO  2019-02-21 17:55:39,021 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 301.867ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:55:39,091 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:55:39,097 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:39,103 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.5417ms 204 
+INFO  2019-02-21 17:55:39,108 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:55:39,114 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:39,117 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:39,124 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerFile"}. Executing action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:55:39,127 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:39,177 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:55:39,335 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 155.0391ms.
+INFO  2019-02-21 17:55:39,443 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:39,450 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) in 319.2116ms
+INFO  2019-02-21 17:55:39,459 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 346.0939ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:55:41,540 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:55:41,543 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:41,554 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.7451ms 204 
+INFO  2019-02-21 17:55:41,573 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:55:41,588 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:41,615 [29   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:41,628 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-02-21 17:55:41,632 [29   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:41,667 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-02-21 17:55:41,677 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 8.309ms.
+INFO  2019-02-21 17:55:41,742 [21   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:41,748 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 115.259ms
+INFO  2019-02-21 17:55:41,754 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 191.4939ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:55:41,793 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:55:41,811 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:41,818 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.177ms 204 
+INFO  2019-02-21 17:55:41,839 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:55:41,844 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:41,849 [21   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:55:41,859 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application)
+INFO  2019-02-21 17:55:41,864 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:55:41,907 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) - Validation state: Valid
+INFO  2019-02-21 17:55:41,990 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 79.9359ms.
+INFO  2019-02-21 17:55:42,000 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:55:42,004 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) in 141.1875ms
+INFO  2019-02-21 17:55:42,008 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 171.8245ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:57:58,027 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:57:58,038 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:57:58,114 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.9575ms 204 
+INFO  2019-02-21 17:57:58,143 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:57:58,149 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:57:58,157 [48   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:57:58,166 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-02-21 17:57:58,172 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:57:58,227 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-02-21 17:57:58,356 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 18.8175ms.
+INFO  2019-02-21 17:57:58,510 [48   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:57:58,518 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 344.4662ms
+INFO  2019-02-21 17:57:58,695 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 380.4119ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:57:58,957 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:57:59,026 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:57:59,114 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 331.6019ms 204 
+INFO  2019-02-21 17:57:59,123 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:57:59,128 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:57:59,137 [48   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:57:59,178 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application)
+INFO  2019-02-21 17:57:59,190 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:57:59,630 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) - Validation state: Valid
+INFO  2019-02-21 17:57:59,846 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 213.363ms.
+INFO  2019-02-21 17:57:59,857 [41   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:57:59,864 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) in 679.1556ms
+INFO  2019-02-21 17:57:59,896 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 751.9209ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:04,049 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:58:04,109 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:58:04,131 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:04,141 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:04,157 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 111.9004ms 204 
+INFO  2019-02-21 17:58:04,163 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 98.5004ms 204 
+INFO  2019-02-21 17:58:04,187 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:58:04,191 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:58:04,195 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:04,197 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:04,204 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:58:04,207 [41   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:04,211 [48   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:04,219 [50   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:04,240 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Country"}. Executing action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:04,245 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Customer"}. Executing action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:04,273 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:04,278 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:04,281 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 114.7814ms 204 
+INFO  2019-02-21 17:58:04,340 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:58:04,377 [50   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:04,378 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:04,381 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:04,401 [50   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:04,451 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Brand"}. Executing action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:04,456 [50   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:04,588 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:04,682 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 298.1225ms.
+INFO  2019-02-21 17:58:04,760 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 375.7828ms.
+INFO  2019-02-21 17:58:04,949 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 359.1446ms.
+INFO  2019-02-21 17:58:04,955 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:05,033 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) in 782.3698ms
+INFO  2019-02-21 17:58:05,043 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 870.0922ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:05,139 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:05,145 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) in 898.571ms
+INFO  2019-02-21 17:58:05,153 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 986.6981ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:05,164 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:05,186 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) in 712.1087ms
+INFO  2019-02-21 17:58:05,195 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 907.6038ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:06,405 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:06,409 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:06,419 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.8524ms 204 
+INFO  2019-02-21 17:58:06,445 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:06,461 [47   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:06,478 [47   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:06,496 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerBrand"}. Executing action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:06,545 [47   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:06,629 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:06,836 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 201.9419ms.
+INFO  2019-02-21 17:58:06,957 [41   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:06,961 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) in 461.4379ms
+INFO  2019-02-21 17:58:06,969 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 537.1196ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:07,027 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:07,041 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:07,064 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.3785ms 204 
+INFO  2019-02-21 17:58:07,070 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:07,075 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:07,079 [48   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:07,088 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerContact"}. Executing action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:07,093 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:07,144 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:07,274 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 127.2234ms.
+INFO  2019-02-21 17:58:07,382 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:07,390 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) in 294.9339ms
+INFO  2019-02-21 17:58:07,398 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 330.6984ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:07,435 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:07,438 [48   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:07,459 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.7562ms 204 
+INFO  2019-02-21 17:58:07,462 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:07,468 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:07,473 [41   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:07,480 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerFile"}. Executing action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:07,486 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:07,529 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:07,694 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 162.4544ms.
+INFO  2019-02-21 17:58:07,866 [47   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:07,873 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) in 386.838ms
+INFO  2019-02-21 17:58:07,892 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 414.9754ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:12,688 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:58:12,692 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:12,702 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.0288ms 204 
+INFO  2019-02-21 17:58:12,840 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:58:12,851 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:12,857 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.1925ms 204 
+INFO  2019-02-21 17:58:12,862 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:58:12,874 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:12,887 [41   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:12,896 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application)
+INFO  2019-02-21 17:58:12,902 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:12,946 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) - Validation state: Valid
+INFO  2019-02-21 17:58:13,033 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 83.4953ms.
+INFO  2019-02-21 17:58:13,044 [41   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:13,048 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) in 147.7114ms
+INFO  2019-02-21 17:58:13,056 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 189.6573ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:13,971 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:58:13,991 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:58:13,997 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:14,028 [50   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:14,043 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 65.5674ms 204 
+INFO  2019-02-21 17:58:14,072 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 95.3771ms 204 
+INFO  2019-02-21 17:58:14,078 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:58:14,087 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:58:14,090 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:14,102 [51   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:14,110 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:58:14,123 [41   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:14,127 [51   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:14,136 [52   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:14,143 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Country"}. Executing action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:14,147 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Customer"}. Executing action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:14,155 [51   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:14,159 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:14,168 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 193.4539ms 204 
+INFO  2019-02-21 17:58:14,293 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:58:14,295 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:14,308 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:14,391 [52   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:14,400 [52   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:14,502 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 197.6911ms.
+INFO  2019-02-21 17:58:14,505 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Brand"}. Executing action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:14,509 [52   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:14,622 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:14,758 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 423.9048ms.
+INFO  2019-02-21 17:58:14,801 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:14,807 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) in 657.3726ms
+INFO  2019-02-21 17:58:14,869 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 733.5855ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:14,973 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 349.468ms.
+INFO  2019-02-21 17:58:14,979 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:14,988 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) in 826.0919ms
+INFO  2019-02-21 17:58:14,993 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 927.0916ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:15,119 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:15,126 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) in 614.2422ms
+INFO  2019-02-21 17:58:15,139 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 956.9488ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:16,890 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:16,897 [49   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:16,903 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.8883ms 204 
+INFO  2019-02-21 17:58:16,937 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:16,946 [49   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:16,983 [49   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:17,002 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerBrand"}. Executing action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:17,010 [49   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:17,090 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:17,284 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 190.8074ms.
+INFO  2019-02-21 17:58:17,370 [41   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:17,374 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) in 367.8747ms
+INFO  2019-02-21 17:58:17,402 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 464.3702ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:17,458 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:17,461 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:17,471 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.049ms 204 
+INFO  2019-02-21 17:58:17,476 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:17,480 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:17,487 [41   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:17,497 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerContact"}. Executing action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:17,505 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:17,545 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:17,674 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 127.6501ms.
+INFO  2019-02-21 17:58:17,767 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:17,771 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) in 270.7071ms
+INFO  2019-02-21 17:58:17,778 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 300.1721ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:17,822 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:17,829 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:17,838 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.9643ms 204 
+INFO  2019-02-21 17:58:17,843 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:17,851 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:17,855 [44   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:17,862 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerFile"}. Executing action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:17,867 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:17,897 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:17,990 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 90.6558ms.
+INFO  2019-02-21 17:58:18,089 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:18,093 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) in 228.034ms
+INFO  2019-02-21 17:58:18,099 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 253.9289ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:22,467 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/upload/8b268c71-77c7-4556-b944-94cbfcf565bf.png  
+INFO  2019-02-21 17:58:22,540 [41   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/upload/8b268c71-77c7-4556-b944-94cbfcf565bf.png'. Physical path: 'D:\项目\GitAbpTest\aspnet-core\src\CoreTest.Web.Host\wwwroot\upload\8b268c71-77c7-4556-b944-94cbfcf565bf.png'
+INFO  2019-02-21 17:58:22,555 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 78.8431ms 200 image/png
+INFO  2019-02-21 17:58:24,841 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-02-21 17:58:24,844 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:24,851 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.8766ms 204 
+INFO  2019-02-21 17:58:24,961 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:58:24,981 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:24,990 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.1838ms 204 
+INFO  2019-02-21 17:58:24,994 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-02-21 17:58:25,001 [43   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:25,023 [43   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:25,036 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application)
+INFO  2019-02-21 17:58:25,040 [43   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:25,077 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) - Validation state: Valid
+INFO  2019-02-21 17:58:25,153 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 73.7148ms.
+INFO  2019-02-21 17:58:25,166 [41   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:25,174 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Sessions.SessionAppService.GetCurrentLoginInformations (CoreTest.Application) in 130.2331ms
+INFO  2019-02-21 17:58:25,183 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 182.8208ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:25,917 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:58:25,925 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:58:25,931 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:58:25,936 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:25,942 [50   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:25,956 [52   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:25,968 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 33.007ms 204 
+INFO  2019-02-21 17:58:25,971 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 29.0752ms 204 
+INFO  2019-02-21 17:58:25,974 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customer/GetAll?maxResultCount=10&skipCount=0&where=  
+INFO  2019-02-21 17:58:25,977 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Brand/GetAll?maxResultCount=1000000&skipCount=0  
+INFO  2019-02-21 17:58:25,986 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 44.2846ms 204 
+INFO  2019-02-21 17:58:25,992 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:26,002 [50   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:26,008 [41   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:26,017 [50   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:26,026 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Country/GetAll?maxResultCount=1000&skipCount=0  
+INFO  2019-02-21 17:58:26,033 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Customer"}. Executing action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:26,035 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Brand"}. Executing action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:26,038 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:26,041 [50   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:26,057 [52   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:26,137 [52   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:26,196 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:26,201 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:26,206 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Country"}. Executing action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:26,212 [52   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:26,406 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:26,660 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 455.1546ms.
+INFO  2019-02-21 17:58:26,730 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 529.8432ms.
+INFO  2019-02-21 17:58:26,736 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 327.5497ms.
+INFO  2019-02-21 17:58:27,011 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:27,012 [47   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:27,021 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Countrys.CountryAppService.GetAll (CoreTest.Application) in 805.8059ms
+INFO  2019-02-21 17:58:27,028 [41   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:27,042 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1035.0486ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:27,047 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerAppService.GetAll (CoreTest.Application) in 995.8964ms
+INFO  2019-02-21 17:58:27,050 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.Brands.BrandAppService.GetAll (CoreTest.Application) in 978.4933ms
+INFO  2019-02-21 17:58:27,061 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1082.3667ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:27,068 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1079.3718ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:28,535 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:28,539 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:28,544 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.3774ms 204 
+INFO  2019-02-21 17:58:28,574 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/customerbrand/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:28,583 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:28,588 [44   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:28,639 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerBrand"}. Executing action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:28,643 [44   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:28,731 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:28,927 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 191.9862ms.
+INFO  2019-02-21 17:58:29,046 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:29,050 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerBrandAppService.GetAll (CoreTest.Application) in 406.9197ms
+INFO  2019-02-21 17:58:29,060 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 503.4144ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:29,121 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:29,131 [47   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:29,137 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.6233ms 204 
+INFO  2019-02-21 17:58:29,150 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerContact/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:29,157 [47   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:29,161 [47   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:29,171 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerContact"}. Executing action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:29,175 [47   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:29,217 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:29,348 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 126.7465ms.
+INFO  2019-02-21 17:58:29,452 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:29,456 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerContactAppService.GetAll (CoreTest.Application) in 281.2866ms
+INFO  2019-02-21 17:58:29,489 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 316.894ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:29,515 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:29,518 [50   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:29,531 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.5976ms 204 
+INFO  2019-02-21 17:58:29,543 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/CustomerFile/GetAll?maxResultCount=1000000&skipCount=0&where=CustomerId%3D%271%27  
+INFO  2019-02-21 17:58:29,548 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:29,552 [41   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-02-21 17:58:29,559 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "CustomerFile"}. Executing action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application)
+INFO  2019-02-21 17:58:29,565 [41   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2019-02-21 17:58:29,620 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) with arguments (CoreTest.BaseDto.PageResultRequestSearch) - Validation state: Valid
+INFO  2019-02-21 17:58:29,772 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 150.4719ms.
+INFO  2019-02-21 17:58:29,902 [48   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-02-21 17:58:29,907 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action CoreTest.App.Customers.CustomerFileAppService.GetAll (CoreTest.Application) in 342.932ms
+INFO  2019-02-21 17:58:29,922 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 376.0097ms 200 application/json; charset=utf-8
+INFO  2019-02-21 17:58:34,009 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/upload/a9b71dec-7ac7-4adb-a741-999daeff13b8.xls  
+INFO  2019-02-21 17:58:34,052 [44   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/upload/a9b71dec-7ac7-4adb-a741-999daeff13b8.xls'. Physical path: 'D:\项目\GitAbpTest\aspnet-core\src\CoreTest.Web.Host\wwwroot\upload\a9b71dec-7ac7-4adb-a741-999daeff13b8.xls'
+INFO  2019-02-21 17:58:34,059 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 46.0857ms 200 application/vnd.ms-excel
