@@ -65,7 +65,7 @@ namespace CoreTest.Controllers
         }
 
         /// <summary>
-        /// 文件流的方式输出        /// </summary>
+        /// 文件流的方式输出  
         /// <returns></returns>
         [HttpPost]
         public ContentResult ViewCustomerFile(string file)
