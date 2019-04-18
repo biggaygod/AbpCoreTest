@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CoreTest.Brands
 {
-    public interface IBrandAppService : IAsyncCrudAppService<BrandDto, int, PageResultRequestSearch, CreateBrandDto, BrandDto>,IApplicationService
+    public interface IBrandAppService : IAsyncCrudAppService<BrandDto, int, PageResultRequestSearch, CreateBrandDto, BrandDto>, IApplicationService
     {
     }
 }

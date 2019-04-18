@@ -13,5 +13,7 @@
         public const string Pages_Countrys = "Pages.Countrys";
 
         public const string Pages_Customers = "Pages.Customers";
+
+        public const string Pages_SignBodies = "Pages_SignBodies";
     }
 }

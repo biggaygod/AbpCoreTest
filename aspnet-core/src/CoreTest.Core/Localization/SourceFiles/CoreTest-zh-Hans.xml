@@ -84,5 +84,8 @@
     <text name="CreateNewFileCustomer" value="上传关联文件" />
     <text name="UploadFiles" value="上传文件" />
 
+    <!--签约主体-->
+    <text name="SignBodies" value="签约主体" />
+
   </texts>
 </localizationDictionary>

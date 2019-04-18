@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.AutoMapper;
@@ -25,17 +26,17 @@ using System.Data;
 namespace CoreTest.Brands
 {
     [AbpAuthorize(PermissionNames.Pages_Brands)]
-    public class BrandAppService: AsyncCrudAppService<Brand, BrandDto, int, PageResultRequestSearch, CreateBrandDto, BrandDto>,IBrandAppService
+    public class BrandAppService : AsyncCrudAppService<Brand, BrandDto, int, PageResultRequestSearch, CreateBrandDto, BrandDto>, IBrandAppService
     {
         private readonly ICacheManager _cacheManager;
 
         private readonly IRepository<Country> _countryRepository;
 
 
-        public BrandAppService(IRepository<Brand, int> repository, 
+        public BrandAppService(IRepository<Brand, int> repository,
             ICacheManager cacheManager,
             IRepository<Country> countryRepository
-            ) :base(repository)
+            ) : base(repository)
         {
             _cacheManager = cacheManager;
             _countryRepository = countryRepository;

@@ -14,6 +14,7 @@ namespace CoreTest.Authorization
             context.CreatePermission(PermissionNames.Pages_Brands, L("Brands"));
             context.CreatePermission(PermissionNames.Pages_Countrys, L("Countrys"));
             context.CreatePermission(PermissionNames.Pages_Customers, L("Customers"));
+            context.CreatePermission(PermissionNames.Pages_SignBodies, L("SignBodies"));
         }
 
         private static ILocalizableString L(string name)

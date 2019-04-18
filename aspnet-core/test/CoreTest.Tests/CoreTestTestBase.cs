@@ -14,6 +14,7 @@ using CoreTest.EntityFrameworkCore;
 using CoreTest.EntityFrameworkCore.Seed.Host;
 using CoreTest.EntityFrameworkCore.Seed.Tenants;
 using CoreTest.MultiTenancy;
+using CoreTest.Tests.TestDatas;
 
 namespace CoreTest.Tests
 {
@@ -43,6 +44,7 @@ namespace CoreTest.Tests
             {
                 NormalizeDbContext(context);
                 new TenantRoleAndUserBuilder(context, 1).Create();
+                new TestDaraBuilder(context, 1).Create();
             });
 
             LoginAsDefaultTenantAdmin();
