@@ -17,4 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CoreTest.Core\CoreTest.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App\BaseData\SignBodies\" />
+  </ItemGroup>
 </Project>

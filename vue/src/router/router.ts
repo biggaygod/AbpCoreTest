@@ -47,15 +47,12 @@ export const appRouters=[{
     ]
     },{
     path:'/setting',
-    name:'setting',
+    name:'setting2',
     permission:'',
-    meta:{title:'主菜单'},
+    meta:{title:'基础数据'},
     icon:'&#xe68a;',
     component:main,
     children:[
-        {path: 'user',permission:'Pages.Users', meta:{title:'Users'}, name: 'user', component:()=>import('../views/setting/user/user.vue')},
-        {path: 'role',permission:'Pages.Roles', meta:{title:'Roles'}, name: 'role', component:()=>import('../views/setting/role/role.vue')},
-        {path: 'tenant',permission:'Pages.Tenants', meta:{title:'Tenants'}, name: 'tenant', component:()=>import('../views/setting/tenant/tenant.vue')},
         {path: 'brand',permission:'Pages.Brands', meta:{title:'Brands'}, name: 'brand', component:()=>import('../views/setting/brand/brand.vue')},
         {path: 'country',permission:'Pages.Countrys', meta:{title:'Countrys'}, name: 'country', component:()=>import('../views/setting/country/country.vue')},
         {path: 'customer',permission:'Pages.Customers', meta:{title:'Customers'}, name: 'customer', component:()=>import('../views/setting/customer/customer.vue')}

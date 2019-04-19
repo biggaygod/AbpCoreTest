@@ -14,6 +14,13 @@
 
         public const string Pages_Customers = "Pages.Customers";
 
+        #region 基础数据权限
+        //签约主体
         public const string Pages_SignBodies = "Pages_SignBodies";
+        //字典数据
+        public const string Pages_Dictionaries = "Pages_Dictionaries";
+        #endregion
+
+
     }
 }

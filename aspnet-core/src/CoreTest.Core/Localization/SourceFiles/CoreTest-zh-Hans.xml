@@ -87,5 +87,7 @@
     <!--签约主体-->
     <text name="SignBodies" value="签约主体" />
 
+    <!--字典数据-->
+    <text name="Dictionaries" value="字典数据" />
   </texts>
 </localizationDictionary>
