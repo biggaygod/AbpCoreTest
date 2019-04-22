@@ -24,7 +24,7 @@ namespace CoreTest.Web.Host.Startup
 {
     public class Startup
     {
-        private const string _defaultCorsPolicyName = "111.231.134.184";
+        private const string _defaultCorsPolicyName = "localhost";
 
         private readonly IConfigurationRoot _appConfiguration;
 
