@@ -34,7 +34,6 @@ namespace CoreTest.Tests.Customers
                     CustomerCode = "TestCN",
                     IsActive = true,
                     CustomerName = "中国测试",
-                    CountryCode = "CN",
                     Address = "中国上海",
                     Phone = "17796554433",
                     Spell = "AA",
@@ -58,7 +57,6 @@ namespace CoreTest.Tests.Customers
                         CustomerCode = "TestCN",
                         IsActive = true,
                         CustomerName = "中国测试",
-                        CountryCode = "CN",
                         Address = "中国上海",
                         Phone = "17796554433",
                         Spell = "AA",
@@ -66,7 +64,7 @@ namespace CoreTest.Tests.Customers
                         EngName = "ChinaTest"
                     });
                 initalCount.ShouldBe(8);
-                ctx.Customer.FirstOrDefault(t => t.CountryCode == "CN").ShouldNotBeNull();
+                ctx.Customer.FirstOrDefault(t => t.CustomerCode == "TestCN").ShouldNotBeNull();
                 ctx.Customer.Count().ShouldBe(initalCount + 1);
                 customerResult1.Id.ShouldBeGreaterThan(0);
             });
@@ -98,7 +96,6 @@ namespace CoreTest.Tests.Customers
                     CustomerCode = "TestCN",
                     IsActive = false,
                     CustomerName = "中国测试",
-                    CountryCode = "CN",
                     Address = "中国上海",
                     Phone = "17796554433",
                     Spell = "AA",
@@ -115,8 +112,8 @@ namespace CoreTest.Tests.Customers
                 customerResult2.ShouldNotBe(null);
                 customerResult1.Id.ShouldBe(customerResult2.Id);
                 customerResult1.CountryCode.ShouldBe(customerResult2.CountryCode);
-                customerResult1.CustomerName.ShouldNotBe(customerResult2.CustomerName);
-                customerResult1.CustomerName.ShouldNotBe(customerResult2.CustomerName);
+                customerResult1.TenantId.ShouldNotBe(customerResult2.TenantId);
+                customerResult1.TenantId.ShouldNotBe(customerResult2.TenantId);
                 customerResult1.EngName.ShouldNotBe(customerResult2.EngName);
                 customerResult1.Spell.ShouldNotBe(customerResult2.Spell);
                 customerResult1.IsActive.ShouldNotBe(customerResult2.IsActive);

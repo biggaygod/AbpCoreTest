@@ -50,11 +50,11 @@ namespace CoreTest.EntityFrameworkCore
             #endregion
 
             #region 客户多重主键
-            modelBuilder.Entity<Brand>().HasKey(u => new { u.Id, u.CountryCode });
-            modelBuilder.Entity<Customer>().HasKey(u => new { u.Id, u.CountryCode });
-            modelBuilder.Entity<CustomerBrand>().HasKey(u => new { u.Id, u.CountryCode });
-            modelBuilder.Entity<CustomerContact>().HasKey(u => new { u.Id, u.CountryCode });
-            modelBuilder.Entity<CustomerFile>().HasKey(u => new { u.Id, u.CountryCode });
+            //modelBuilder.Entity<Brand>().HasKey(u => new { u.Id, u.CountryCode });
+            //modelBuilder.Entity<Customer>().HasKey(u => new { u.Id, u.CountryCode });
+            //modelBuilder.Entity<CustomerBrand>().HasKey(u => new { u.Id, u.CountryCode });
+            //modelBuilder.Entity<CustomerContact>().HasKey(u => new { u.Id, u.CountryCode });
+            //modelBuilder.Entity<CustomerFile>().HasKey(u => new { u.Id, u.CountryCode });
             #endregion
         }
     }

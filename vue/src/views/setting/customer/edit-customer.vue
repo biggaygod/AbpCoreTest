@@ -73,20 +73,6 @@ export default class EditCustomer extends AbpBase {
     }
   }
   CustomerRule = {
-    countryCode: [
-      {
-        required: true,
-        message: this.L("FieldIsRequired", undefined, this.L("CountryCode")),
-        trigger: "blur"
-      }
-    ],
-    customerName: [
-      {
-        required: true,
-        message: this.L("FieldIsRequired", undefined, this.L("CustomerName")),
-        trigger: "blur"
-      }
-    ],
     customerCode: [
       {
         required: true,

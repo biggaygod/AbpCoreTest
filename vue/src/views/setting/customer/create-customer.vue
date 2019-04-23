@@ -9,12 +9,6 @@
       <Form ref="customerForm" label-position="top" :rules="customerRule" :model="customer">
         <Tabs value="detail">
           <TabPane :label="L('UserDetails')" name="detail">
-            <FormItem :label="L('CountryName')" prop="countryName">
-              <countrylist v-model="customer.countryCode"></countrylist>
-            </FormItem>
-            <FormItem :label="L('CountryCode')" prop="countryCode">
-              <Input v-model="customer.countryCode" :maxlength="32" :minlength="2" readonly></Input>
-            </FormItem>
             <FormItem :label="L('CustomerCode')" prop="customerCode">
               <Input v-model="customer.customerCode" :maxlength="20" :minlength="2"></Input>
             </FormItem>
@@ -71,6 +65,7 @@ export default class CreateCustomer extends AbpBase {
         });
         (this.$refs.customerForm as any).resetFields();
         this.$emit("save-success");
+        this.$emit("input", false);
       }
     });
   }
@@ -85,20 +80,6 @@ export default class CreateCustomer extends AbpBase {
   }
 
   customerRule = {
-    countryCode: [
-      {
-        required: true,
-        message: this.L("FieldIsRequired", undefined, this.L("CountryCode")),
-        trigger: "blur"
-      }
-    ],
-    customerCode: [
-      {
-        required: true,
-        message: this.L("FieldIsRequired", undefined, this.L("CustomerCode")),
-        trigger: "blur"
-      }
-    ],
     customerName: [
       {
         required: true,

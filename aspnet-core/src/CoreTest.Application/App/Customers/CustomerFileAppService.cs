@@ -38,7 +38,6 @@ namespace CoreTest.App.Customers
             var CustomerFile = ObjectMapper.Map<CustomerFile>(input);
 
             CustomerFile.TenantId = AbpSession.TenantId;
-            CustomerFile.CountryCode = _customerRepository.Get(input.CustomerId).CountryCode;
 
             await Repository.InsertAsync(CustomerFile);
 

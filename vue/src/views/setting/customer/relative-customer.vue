@@ -161,14 +161,6 @@ export default class RelativeCustomer extends AbpBase {
   //关联品牌数据绑定
   columnsbrand = [
     {
-      title: this.L("CountryCode"),
-      key: "countryCode"
-    },
-    {
-      title: this.L("CountryName"),
-      key: "countryname"
-    },
-    {
       title: this.L("CustomerId"),
       key: "customerId"
     },
@@ -241,14 +233,6 @@ export default class RelativeCustomer extends AbpBase {
   ];
   //关联联系方式数据绑定
   columnscontact = [
-    {
-      title: this.L("CountryCode"),
-      key: "countryCode"
-    },
-    {
-      title: this.L("CountryName"),
-      key: "countryname"
-    },
     {
       title: this.L("CustomerId"),
       key: "customerId"
@@ -332,14 +316,6 @@ export default class RelativeCustomer extends AbpBase {
   ];;
   //关联文件数据绑定
   columnsfile = [
-    {
-      title: this.L("CountryCode"),
-      key: "countryCode"
-    },
-    {
-      title: this.L("CountryName"),
-      key: "countryname"
-    },
     {
       title: this.L("CustomerId"),
       key: "customerId"

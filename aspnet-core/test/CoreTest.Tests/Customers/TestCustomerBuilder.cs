@@ -22,11 +22,9 @@ namespace CoreTest.Tests.Customers
             {
                 var customer = new Customer()
                 {
-                    Id = i + 1,
                     CustomerCode = "TestCN" + i,
                     IsActive = true,
                     CustomerName = "中国测试" + i,
-                    CountryCode = "CN" + i,
                     Address = "中国上海" + i,
                     Phone = "17796554433" + i,
                     Spell = "AA" + i,

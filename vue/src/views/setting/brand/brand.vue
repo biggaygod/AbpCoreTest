@@ -5,13 +5,8 @@
                 <Form ref="queryForm" :label-width="80" label-position="left" inline>
                     <Row :gutter="16">
                         <Col span="6">
-                            <FormItem :label="L('CountryCode')+':'" style="width:100%">
-                                <Input v-model="filters[0].Value"></Input>
-                            </FormItem>
-                        </Col>
-                        <Col span="6">
                             <FormItem :label="L('BrandName')+':'" style="width:100%">
-                                <Input v-model="filters[1].Value"></Input>
+                                <Input v-model="filters[0].Value"></Input>
                             </FormItem>
                         </Col>
                         <Col span="6">
@@ -25,7 +20,7 @@
                         </Col>
                         <Col span="6">
                             <FormItem :label="L('CreationTime')+':'" style="width:100%">
-                                <DatePicker  v-model="filters[2].Value" type="datetimerange" format="yyyy-MM-dd" style="width:100%" placement="bottom-end" :placeholder="L('SelectDate')"></DatePicker>
+                                <DatePicker  v-model="filters[1].Value" type="datetimerange" format="yyyy-MM-dd" style="width:100%" placement="bottom-end" :placeholder="L('SelectDate')"></DatePicker>
                             </FormItem>
                         </Col>
                     </Row>
@@ -61,7 +56,6 @@
             this.editModalShow=true;
         }
         filters:Filter[]=[
-            {Type:FieldType.String,Value:'',FieldName:'CountryCode',CompareType:CompareType.Contains},
             {Type:FieldType.String,Value:'',FieldName:'BrandName',CompareType:CompareType.Contains},
             {Type:FieldType.DataRange,Value:'',FieldName:'CreationTime',CompareType:CompareType.Contains},
             {Type:FieldType.Boolean,Value:null,FieldName:'IsActive',CompareType:CompareType.Equal}
@@ -79,11 +73,11 @@
         }
         isActiveChange(val:string){
             if(val==='Actived'){
-                this.filters[3].Value=true;
+                this.filters[2].Value=true;
             }else if(val==='NoActive'){
-                this.filters[3].Value=false;
+                this.filters[2].Value=false;
             }else{
-                this.filters[3].Value=null;
+                this.filters[2].Value=null;
             }
         }
         pageChange(page:number){
@@ -115,12 +109,6 @@
             return this.$store.state.brand.currentPage;
         }
         columns=[{
-            title:this.L('CountryCode'),
-            key:'countryCode'
-        },{
-            title:this.L('CountryName'),
-            key:'countryName'
-        },{
             title:this.L('BrandName'),
             key:'brandName'
         },{

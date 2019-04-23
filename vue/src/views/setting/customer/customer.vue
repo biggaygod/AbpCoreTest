@@ -5,13 +5,8 @@
         <Form ref="queryForm" :label-width="80" label-position="left" inline>
           <Row :gutter="16">
             <Col span="6">
-              <FormItem :label="L('CountryCode')+':'" style="width:100%">
-                <Input v-model="filters[0].Value"></Input>
-              </FormItem>
-            </Col>
-            <Col span="6">
               <FormItem :label="L('CustomerName')+':'" style="width:100%">
-                <Input v-model="filters[1].Value"></Input>
+                <Input v-model="filters[0].Value"></Input>
               </FormItem>
             </Col>
             <Col span="6">
@@ -26,7 +21,7 @@
             <Col span="6">
               <FormItem :label="L('CreationTime')+':'" style="width:100%">
                 <DatePicker
-                  v-model="filters[2].Value"
+                  v-model="filters[1].Value"
                   type="datetimerange"
                   format="yyyy-MM-dd"
                   style="width:100%"
@@ -102,12 +97,6 @@ export default class Customers extends AbpBase {
     {
       Type: FieldType.String,
       Value: "",
-      FieldName: "CountryCode",
-      CompareType: CompareType.Contains
-    },
-    {
-      Type: FieldType.String,
-      Value: "",
       FieldName: "CustomerName",
       CompareType: CompareType.Contains
     },
@@ -134,11 +123,11 @@ export default class Customers extends AbpBase {
 
   isActiveChange(val: string) {
     if (val === "Actived") {
-      this.filters[3].Value = true;
+      this.filters[2].Value = true;
     } else if (val === "NoActive") {
-      this.filters[3].Value = false;
+      this.filters[2].Value = false;
     } else {
-      this.filters[3].Value = null;
+      this.filters[2].Value = null;
     }
   }
   pageChange(page: number) {
@@ -198,16 +187,6 @@ export default class Customers extends AbpBase {
           )
         ]);
       }
-    },
-    {
-      title: this.L("CountryCode"),
-      key: "countryCode",
-      width: 100
-    },
-    {
-      title: this.L("CountryName"),
-      key: "countryName",
-      width: 100
     },
     {
       title: this.L("CustomerCode"),

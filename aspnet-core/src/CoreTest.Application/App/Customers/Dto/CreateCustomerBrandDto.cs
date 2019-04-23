@@ -12,11 +12,6 @@ namespace CoreTest.App.Customers.Dto
     {
         public int? Id { get; set; }
 
-        [MaxLength(20, ErrorMessage = "MaxLength 20")]
-        public string CountryCode { get; set; }
-
-        public string CountryName { get; set; }
-
         public int BrandId { get; set; }
 
         public int CustomerId { get; set; }

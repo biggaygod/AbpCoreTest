@@ -20,11 +20,6 @@ namespace CoreTest.Entities.Customer
 
         public virtual string CustomerCode { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [MaxLength(20, ErrorMessage = "MaxLength 20")]
-        public virtual string CountryCode { get; set; }
-
         [MaxLength(120, ErrorMessage = "MaxLength 120")]
         public virtual string CustomerName { get; set; }
 

@@ -17,11 +17,6 @@ namespace CoreTest.App.Customers.Dto
         [MaxLength(120, ErrorMessage = "MaxLength 120")]
         public string CustomerName { get; set; }
 
-        [MaxLength(20, ErrorMessage = "MaxLength 20")]
-        public string CountryCode { get; set; }
-
-        public string CountryName { get; set; }
-
         [MaxLength(2000, ErrorMessage = "MaxLength 2000")]
         public virtual string Address { get; set; }
 

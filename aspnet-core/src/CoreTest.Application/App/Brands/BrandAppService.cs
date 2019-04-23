@@ -103,10 +103,7 @@ namespace CoreTest.Brands
 
         protected override BrandDto MapToEntityDto(Brand entity)
         {
-            var countrys = _countryRepository.GetAll();
-            var country = countrys.Where(u => u.CountryCode == entity.CountryCode).FirstOrDefault();
             var item = ObjectMapper.Map<BrandDto>(entity);
-            item.CountryName = country == null ? string.Empty : country.CountryName;
             return item;
         }
         #endregion

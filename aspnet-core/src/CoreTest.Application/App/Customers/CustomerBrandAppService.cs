@@ -41,7 +41,6 @@ namespace CoreTest.App.Customers
             var CustomerBrand = ObjectMapper.Map<CustomerBrand>(input);
 
             CustomerBrand.TenantId = AbpSession.TenantId;
-            CustomerBrand.CountryCode = _brandRepository.Get(input.BrandId).CountryCode;
 
             await Repository.InsertAsync(CustomerBrand);
 

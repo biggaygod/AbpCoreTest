@@ -38,7 +38,6 @@ namespace CoreTest.Tests.Brands
                 var brand = await _brandAppService.Create(
                 new CreateBrandDto
                 {
-                    CountryCode = "CN",
                     BrandName = "测试品牌",
                     EngName = "TestBrand",
                     Spell = "Test",
@@ -72,7 +71,6 @@ namespace CoreTest.Tests.Brands
                 //Arrange 
                 var Brand = new CreateBrandDto
                 {
-                    CountryCode = "CNS",
                     BrandName = "测试品牌S",
                     EngName = "TestBrandS",
                     Spell = "TestS",
@@ -87,7 +85,7 @@ namespace CoreTest.Tests.Brands
                 brandResult1.ShouldNotBe(null);
                 brandResult2.ShouldNotBe(null);
                 brandResult1.Id.ShouldBe(brandResult2.Id);
-                brandResult1.CountryCode.ShouldBe(brandResult2.CountryCode);
+                brandResult1.TenantId.ShouldBe(brandResult2.TenantId);
                 brandResult1.BrandName.ShouldNotBe(brandResult2.BrandName);
                 brandResult1.EngName.ShouldNotBe(brandResult2.EngName);
                 brandResult1.Spell.ShouldNotBe(brandResult2.Spell);
@@ -104,7 +102,6 @@ namespace CoreTest.Tests.Brands
                 //Arrange
                 var Brand1 = new CreateBrandDto
                 {
-                    CountryCode = "CNS",
                     BrandName = "测试品牌S",
                     EngName = "TestBrandS",
                     Spell = "TestS",
@@ -113,7 +110,6 @@ namespace CoreTest.Tests.Brands
 
                 var Brand2 = new CreateBrandDto
                 {
-                    CountryCode = "CNF",
                     BrandName = "测试品牌F",
                     EngName = "TestBrandF",
                     Spell = "TestF",
@@ -128,8 +124,7 @@ namespace CoreTest.Tests.Brands
                 brandResult1.Id.ShouldBeGreaterThan(7);
                 brandResult2.Id.ShouldBeGreaterThan(8);
                 ctx.Brand.Count().ShouldBe(initalCount + 2);
-                ctx.Brand.FirstOrDefault(t => t.CountryCode == "CNS").ShouldNotBe(null);
-                var task = ctx.Brand.FirstOrDefault(t => t.CountryCode == "CNS");
+                var task = ctx.Brand.FirstOrDefault(t => t.BrandName == "测试品牌S");
                 task.ShouldNotBe(null);
                 task.IsActive.ShouldBe(true);
             });

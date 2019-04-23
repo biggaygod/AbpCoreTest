@@ -96,10 +96,7 @@ namespace CoreTest.App.Customers
 
         protected override CustomerDto MapToEntityDto(Customer entity)
         {
-            var countrys = _countryRepository.GetAll();
-            var country = countrys.Where(u => u.CountryCode == entity.CountryCode).FirstOrDefault();
             var item = ObjectMapper.Map<CustomerDto>(entity);
-            item.CountryName = country == null ? string.Empty : country.CountryName;
             return item;
         }
         #endregion

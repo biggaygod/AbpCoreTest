@@ -41,7 +41,6 @@ namespace CoreTest.App.Customers
             var CustomerContact = ObjectMapper.Map<CustomerContact>(input);
 
             CustomerContact.TenantId = AbpSession.TenantId;
-            CustomerContact.CountryCode = _customerRepository.Get(input.CustomerId).CountryCode;
 
             await Repository.InsertAsync(CustomerContact);
 

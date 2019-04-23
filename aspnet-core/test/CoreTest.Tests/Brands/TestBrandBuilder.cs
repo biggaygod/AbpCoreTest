@@ -22,8 +22,6 @@ namespace CoreTest.Tests.Brands
             {
                 var brand = new Brand()
                 {
-                    Id = i + 1,
-                    CountryCode = "CN"+i,
                     BrandName = "测试品牌"+i,
                     EngName = "TestBrand"+i,
                     Spell = "Test"+i,

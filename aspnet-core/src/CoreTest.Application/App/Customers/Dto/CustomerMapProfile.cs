@@ -13,15 +13,15 @@ namespace CoreTest.App.Customers.Dto
         {
             CreateMap<CustomerDto, Customer>();
 
-            CreateMap<Customer, CustomerDto>().ForMember(x => x.CountryName, opt => opt.Ignore()); ;
+            CreateMap<Customer, CustomerDto>();
 
             CreateMap<CreateBrandDto, Customer>();
 
-            CreateMap<CustomerBrand, CustomerBrandDto>().ForMember(x => x.CountryName, opt => opt.Ignore());
+            CreateMap<CustomerBrand, CustomerBrandDto>();
 
-            CreateMap<CustomerContact, CustomerContactDto>().ForMember(x => x.CountryName, opt => opt.Ignore()); ;
+            CreateMap<CustomerContact, CustomerContactDto>();
 
-            CreateMap<CustomerFile, CustomerFileDto>().ForMember(x => x.CountryName, opt => opt.Ignore()); ;
+            CreateMap<CustomerFile, CustomerFileDto>();
         }
     }
 }

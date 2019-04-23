@@ -9,13 +9,6 @@
             <Form ref="brandForm"  label-position="top" :rules="brandRule" :model="brand">
                 <Tabs value="detail">
                     <TabPane :label="L('UserDetails')" name="detail">
-                        <FormItem :label="L('CountryName')" prop="countryName">
-                            <countrylist v-model="brand.countryCode">
-                            </countrylist>
-                        </FormItem>
-                        <FormItem :label="L('CountryCode')" prop="countryCode">
-                            <Input v-model="brand.countryCode" :maxlength="32" :minlength="2" readonly></Input>
-                        </FormItem>
                         <FormItem :label="L('BrandName')" prop="brandName">
                             <Input v-model="brand.brandName" :maxlength="32"></Input>
                         </FormItem>
@@ -73,7 +66,6 @@
             }
         }
         brandRule={
-            countryCode:[{required: true,message:this.L('FieldIsRequired',undefined,this.L('CountryCode')),trigger: 'blur'}],
             brandName:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('BrandName')),trigger: 'blur'}],
             engName:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('EngName')),trigger: 'blur'}],
             spell:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Spell')),trigger: 'blur'}]

@@ -11,8 +11,6 @@ namespace CoreTest.Brands.Dto
     {
         public int? Id { get; set; }
 
-        public string CountryCode { get; set; }
-
         public string BrandName { get; set; }
 
         public string EngName { get; set; }

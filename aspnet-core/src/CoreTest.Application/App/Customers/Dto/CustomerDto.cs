@@ -11,15 +11,10 @@ namespace CoreTest.App.Customers.Dto
     [AutoMapTo(typeof(Customer))]
     public class CustomerDto : EntityDto<int>
     {
-        public virtual string CustomerCode { get; set; }
-
-        [MaxLength(120, ErrorMessage = "MaxLength 120")]
-        public virtual string CustomerName { get; set; }
-
         [MaxLength(20, ErrorMessage = "MaxLength 20")]
-        public string CountryCode { get; set; }
+        public string CustomerCode { get; set; }
 
-        public string CountryName { get; set; }
+        public string CustomerName { get; set; }
 
         [MaxLength(2000, ErrorMessage = "MaxLength 2000")]
         public virtual string Address { get; set; }

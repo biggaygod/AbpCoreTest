@@ -1373,9 +1373,6 @@ namespace CoreTest.Migrations
                         .HasColumnName("BrandId")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CountryCode")
-                        .HasMaxLength(20);
-
                     b.Property<string>("BrandName")
                         .HasMaxLength(120);
 
@@ -1403,9 +1400,7 @@ namespace CoreTest.Migrations
 
                     b.Property<int?>("TenantId");
 
-                    b.HasKey("Id", "CountryCode");
-
-                    b.HasAlternateKey("CountryCode", "Id");
+                    b.HasKey("Id");
 
                     b.ToTable("CRM_Brand");
                 });
@@ -1416,9 +1411,6 @@ namespace CoreTest.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("CustomerId")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CountryCode")
-                        .HasMaxLength(20);
 
                     b.Property<string>("Address")
                         .HasMaxLength(2000);
@@ -1457,9 +1449,7 @@ namespace CoreTest.Migrations
 
                     b.Property<int?>("TenantId");
 
-                    b.HasKey("Id", "CountryCode");
-
-                    b.HasAlternateKey("CountryCode", "Id");
+                    b.HasKey("Id");
 
                     b.ToTable("CRM_Customer");
                 });
@@ -1470,9 +1460,6 @@ namespace CoreTest.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("CustomerBrandId")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CountryCode")
-                        .HasMaxLength(20);
 
                     b.Property<int>("BrandId");
 
@@ -1494,9 +1481,7 @@ namespace CoreTest.Migrations
 
                     b.Property<int?>("TenantId");
 
-                    b.HasKey("Id", "CountryCode");
-
-                    b.HasAlternateKey("CountryCode", "Id");
+                    b.HasKey("Id");
 
                     b.ToTable("CRM_CustomerBrand");
                 });
@@ -1507,9 +1492,6 @@ namespace CoreTest.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("CustomerContactId")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CountryCode")
-                        .HasMaxLength(20);
 
                     b.Property<string>("Address")
                         .HasMaxLength(2000);
@@ -1544,9 +1526,7 @@ namespace CoreTest.Migrations
 
                     b.Property<int?>("TenantId");
 
-                    b.HasKey("Id", "CountryCode");
-
-                    b.HasAlternateKey("CountryCode", "Id");
+                    b.HasKey("Id");
 
                     b.ToTable("CRM_CustomerContact");
                 });
@@ -1557,9 +1537,6 @@ namespace CoreTest.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("CustomerBrandId")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CountryCode")
-                        .HasMaxLength(20);
 
                     b.Property<DateTime>("CreationTime");
 
@@ -1584,9 +1561,7 @@ namespace CoreTest.Migrations
 
                     b.Property<int?>("TenantId");
 
-                    b.HasKey("Id", "CountryCode");
-
-                    b.HasAlternateKey("CountryCode", "Id");
+                    b.HasKey("Id");
 
                     b.ToTable("CRM_CustomerFile");
                 });

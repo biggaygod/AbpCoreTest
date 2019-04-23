@@ -12,9 +12,6 @@ namespace CoreTest.Brands.Dto
     [AutoMapTo(typeof(Brand))]
     public class BrandDto: EntityDto<int>
     {
-        [MaxLength(20, ErrorMessage = "MaxLength 20")]
-        public string CountryCode { get; set; }
-
         public string CountryName { get; set; }
 
         [MaxLength(120, ErrorMessage = "MaxLength 120")]

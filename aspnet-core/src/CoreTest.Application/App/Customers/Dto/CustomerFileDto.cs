@@ -11,11 +11,6 @@ namespace CoreTest.App.Customers.Dto
     [AutoMapTo(typeof(CustomerFile))]
     public class CustomerFileDto : EntityDto<int>
     {
-        [MaxLength(20, ErrorMessage = "MaxLength 20")]
-        public string CountryCode { get; set; }
-
-        public string CountryName { get; set; }
-
         public int CustomerId { get; set; }
 
         public string FilePath { get; set; }

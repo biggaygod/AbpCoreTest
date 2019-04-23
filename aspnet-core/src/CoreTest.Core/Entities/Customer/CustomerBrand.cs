@@ -18,11 +18,6 @@ namespace CoreTest.Entities.Customer
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public override int Id { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [MaxLength(20, ErrorMessage = "MaxLength 20")]
-        public virtual string CountryCode { get; set; }
-
         public virtual int CustomerId { get; set; }
 
         public virtual int BrandId { get; set; }
